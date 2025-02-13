@@ -1,40 +1,41 @@
 \chapter{\IfLanguageName{dutch}{Stand van zaken}{State of the art}}%
 \label{ch:stand-van-zaken}
 
-% Tip: Begin elk hoofdstuk met een paragraaf inleiding die beschrijft hoe
-% dit hoofdstuk past binnen het geheel van de bachelorproef. Geef in het
-% bijzonder aan wat de link is met het vorige en volgende hoofdstuk.
+\section{Inleiding tot industriele netwerkbeveiliging.}
 
-% Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
-
-Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de bachelorproef *diepgaand* uitspitten. De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein. Iemand die niet vertrouwd is met het onderwerp, weet nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken .
-
-Je verwijst bij elke bewering die je doet, vakterm die je introduceert, enz.\ naar je bronnen. In \LaTeX{} kan dat met het commando \texttt{$\backslash${textcite\{\}}} of \texttt{$\backslash${autocite\{\}}}. Als argument van het commando geef je de ``sleutel'' van een ``record'' in een bibliografische databank in het Bib\LaTeX{}-formaat (een tekstbestand). Als je expliciet naar de auteur verwijst in de zin (narratieve referentie), gebruik je \texttt{$\backslash${}textcite\{\}}. Soms is de auteursnaam niet expliciet een onderdeel van de zin, dan gebruik je \texttt{$\backslash${}autocite\{\}} (referentie tussen haakjes). Dit gebruik je bv.~bij een citaat, of om in het bijschrift van een overgenomen afbeelding, broncode, tabel, enz. te verwijzen naar de bron. In de volgende paragraaf een voorbeeld van elk.
-
- schreef een van de standaardwerken over sorteer- en zoekalgoritmen. Experten zijn het erover eens dat cloud computing een interessante opportuniteit vormen, zowel voor gebruikers als voor dienstverleners op vlak van informatietechnologie~.
-
-Let er ook op: het \texttt{cite}-commando voor de punt, dus binnen de zin. Je verwijst meteen naar een bron in de eerste zin die erop gebaseerd is, dus niet pas op het einde van een paragraaf.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{grail.jpg}
-  \caption[Voorbeeld figuur.]{\label{fig:grail}Voorbeeld van invoegen van een figuur. Zorg altijd voor een uitgebreid bijschrift dat de figuur volledig beschrijft zonder in de tekst te moeten gaan zoeken. Vergeet ook je bronvermelding niet!}
-\end{figure}
+\subsection{Wat is een firewall}
+Volgens \textcite{ciscoFW2025} is de definitie van een firewall Een netwerkbeveiligingsapparaat dat een vertrouwd intern netwerk scheidt van een extern netwerk dat als onbetrouwbaar wordt beschouwd, zoals bijvoorbeeld het internet. Het regelt inkomend en uitgaand netwerkverkeer op basis van vooraf ingestelde beveiligingsregels. Firewalls zijn van het grootste belang bij het afschermen van netwerken tegen ongeautoriseerde toegang, schadelijke activiteiten en potentiële bedreigingen.
+Op deze manier kan de beheerder van de firewall kunnen beslissen welk verkeer er in en uit zijn netwerk gaat. Hierdoor kan men het interne netwerk beschermen tegen dreigingen van buitenaf.
 
 
 
-\begin{table}
-  \centering
-  \begin{tabular}{lcr}
-    \toprule
-    \textbf{Kolom 1} & \textbf{Kolom 2} & \textbf{Kolom 3} \\
-    $\alpha$         & $\beta$          & $\gamma$         \\
-    \midrule
-    A                & 10.230           & a                \\
-    B                & 45.678           & b                \\
-    C                & 99.987           & c                \\
-    \bottomrule
-  \end{tabular}
-  \caption[Voorbeeld tabel]{\label{tab:example}Voorbeeld van een tabel.}
-\end{table}
+Een firewall kan bestaan in verschillende vormen, binnen deze zelfde bron van Cisco worden er een groot aantal firewalls doorlopen. Een aantal bekende en veelgebruikte firewalls zijn de statefull inspection firewalls, packet filtering firewall's  en NGFW's.
+ 
+Packet filtering firewalls zullen elk pakket onafhankelijk evalueren, zonder verbindingen bij te houden. Elk pakket zal individueel worden beoordeel aan de hand van de door de beheerder gedefinieerde regels. Dit vereist vaak aparte regels voor zowel het uitgaand (outbound) als inkomend (inbound) verkeer. De mogelijkheid om te specifieren of een filter inbound of outbound is geef je grotere controle over waar de router verschijnt in het filterschema , en is zeer handig voor het filteren op routers met meer dan twee interfaces. Als bepaalde pakketten gedropt kunnen worden door in inbound filter op een interface, dan moeten die pakketten niet vermeld te worden in de outbound filters op alle andere interfaces.. Men zal dan filters kunnen gaan toepassen voor bepaalde parameters van het pakket zoals source IP adres, destination IP adres en poortnummer maar ook aan de hand van het gebruikte IP protocol. Hoewel deze 'stateless firewalls' vandaag de dag minder vaak gebruikt worden, zijn ze nog steeds aanwezig in sommige netwerkapparatuur, vaak zijn dit switches of routers. Het grootste verschil tussen deze statefull en stateless firewalls is dat de stateless firewalls zoals de naam het zegt geen staten van verbindingen zullen gaan bijhouden, zij zullen regels toepassen op alle pakketten zonder rekening te houden met hun context. \autocite{goel2014}
+
+Volgens \textcite{paloAltoSF2025} zou men dit probleem kunnen oplossen door gebruik te maken van packet filteren firewalls, deze firewalls worden ook wel 'statefull firewalls' genoemd. In tegenstelling tot stateless inspectie die elk pakket afzonderlijk behandelt, ziet de statefull firewall het netwerkverkeer als een continue stroom. Dit doet hij onder andere door te kijken naar de 'three way handshake'. Dit maakt het mogelijk om patronen te detecteren die wijzen op potentiële bedreigingen. Stateful inspection analyseert de header van het pakket om te bepalen of het deel uitmaakt van een bestaande conversatie. Als een pakket niet overeenkomt met een bestaande verbinding, dan wordt het geëvalueerd aan de hand van de vooraf beschreven firewallregels om te beslissen of het doorgelaten moet worden. Volgens Palo Alto zouden statefull firewalls actieve verbindingen intelligenter beheren, waardoor de netwerkbronnen efficiënter gebruikt kunnen worden. Pakketten van vertrouwde verbindingen hoeven op deze manier niet voortdurend opnieuw geëvalueerd te worden. Dit zorgt ervoor dat verwerkingslast wordt verlaagt en de doorvoersnelheid wordt gemaximaliseerd. 
+
+Vandaag de dag wordt er als maar meer gebruik gemaakt van Next Generation Firewalls (NGFW’s) die diepe packet inspection uitvoeren en op basis hiervan zullen beslissen of een packet wordt geblokkeerd of niet. Sedert 2020 maken deze NGFW’s ook gebruik van Artificiële Intelligentie (AI). \autocite{Ahmadi2023}. Firewalls die gebruik maken van AI genereren beveiligingsmaatregelen en dwingen deze af op basis van het continue netwerkverkeer waardoor de blootstelling aan nieuwe bedreigingen aanzienlijk wordt verminderd. \autocite{PaloAltoFW2024}
+
+Ondanks de snelle evolutie van firewalls blijft een groot struikelblok bij het toepassen hiervan de complexiteit van bedrijfsnetwerken. Volgens \textcite{Bringhenti2023} wordt het configureren van security functies typisch nog steeds manueel gedaan. Maar omdat moderne netwerken zodanig complex en dynamisch zijn, is de manuele configuratie hiervan niet haalbaar. Dit zorgt ervoor dat het kiezen van een gepaste firewall niet alleen draait om de manier waarop mogelijke threats worden afgehandeld, maar ook de manier waarop de automatisatie en configuratie zullen kunnen worden toegepast.
+
+  
+\subsection{Belang van cybersecurity in een productieomgeving}
+
+De golfkartonindustrie is sterk afhankelijk van onderling verbonden systemen, waardoor cybersecurity essentieel is. OT zal belangrijke productieprocessen gaan beheren, zoals het snijden en printen van golfkarton en zorgt zo voor efficiëntie en kwaliteit. De groeiende connectiviteit brengt risico's van cyberaanvallen met zich mee die de continuïteit kunnen verstoren en gevoelige data in gevaar kunnen brengen. \autocite{fefco2025}
+
+Deze toename in connectiviteit tussen systemen zorgt er niet alleen voor dat nieuwe eisen nodig zijn op het vlak van cybersecurity, maar heeft ook een impact op de bescherming van het ICS zeker als we weten dat de beveiliging van het ICS lange tijd als minder belangrijk werd beschouwd. Vaak werd er gewerkt met "security through obscurity" wat betekent dat systemen werden beschermd door informatie geheim te houden in plaats van echte beveiligingsmaatregelen te implementeren. Dit werkte redelijk goed voor oudere systemen, omdat ze enkel in contact stonden met apparaten vanop het eigen netwerk en amper verbonden waren met apparaten buiten hun netwerk. Bij de derde en tevens ook nieuwste generatie ICS is deze aanpak echter veel minder effectief. Moderne systemen maken gebruik van open technologieën om te communiceren met andere niet ICS netwerken, waaronder het internet. Hierdoor is de beveiliging door onduidelijkheid niet langer voldoende, omdat aanvallers steeds beter bekend zijn met de gebruikte technologieën en kwetsbaarheden makkelijker kunnen vinden. \autocite{knowles2015}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
