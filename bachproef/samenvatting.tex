@@ -1,0 +1,55 @@
+%%=============================================================================
+%% Samenvatting
+%%=============================================================================
+
+% TODO: De "abstract" of samenvatting is een kernachtige (~ 1 blz. voor een
+% thesis) synthese van het document.
+%
+% Een goede abstract biedt een kernachtig antwoord op volgende vragen:
+%
+% 1. Waarover gaat de bachelorproef?
+% 2. Waarom heb je er over geschreven?
+% 3. Hoe heb je het onderzoek uitgevoerd?
+% 4. Wat waren de resultaten? Wat blijkt uit je onderzoek?
+% 5. Wat betekenen je resultaten? Wat is de relevantie voor het werkveld?
+%
+% Daarom bestaat een abstract uit volgende componenten:
+%
+% - inleiding + kaderen thema
+% - probleemstelling
+% - (centrale) onderzoeksvraag
+% - onderzoeksdoelstelling
+% - methodologie
+% - resultaten (beperk tot de belangrijkste, relevant voor de onderzoeksvraag)
+% - conclusies, aanbevelingen, beperkingen
+%
+% LET OP! Een samenvatting is GEEN voorwoord!
+
+%%---------- Nederlandse samenvatting -----------------------------------------
+%
+% TODO: Als je je bachelorproef in het Engels schrijft, moet je eerst een
+% Nederlandse samenvatting invoegen. Haal daarvoor onderstaande code uit
+% commentaar.
+% Wie zijn bachelorproef in het Nederlands schrijft, kan dit negeren, de inhoud
+% wordt niet in het document ingevoegd.
+
+\IfLanguageName{english}{%
+\selectlanguage{dutch}
+\chapter*{Samenvatting}
+\selectlanguage{english}
+}{}
+
+%%---------- Samenvatting -----------------------------------------------------
+% De samenvatting in de hoofdtaal van het document
+
+\chapter*{\IfLanguageName{dutch}{Samenvatting}{Abstract}}
+
+Tegenwoordig is elke machine binnen een productiebedrijf op een of andere manier verbonden met het internet. Dit zorgt ervoor dat er veel efficiënter kan worden gewerkt, omdat verschillende delen van het productieproces beter op elkaar kunnen worden afgestemd. Dit kan enerzijds worden bereikt door gebruik te maken van ERP (Enterprise Resource Planning) systemen die communicatie tussen de verschillende actoren in de supply chain mogelijk maken.
+
+Echter zal dit er ook voor zorgen dat de machines die verbonden zijn met het ICS (Industrial Control System) veel kwetsbaarder zijn voor cyberaanvallen van buitenaf. Dit is omdat er vaak gebruik wordt gemaakt van oude technologieën die een lange levensduur hebben. De aanvallers die controle over het ICS krijgen kunnen productieprocessen gijzelen en bedrijven dwingen tot het betalen van losgeld om de controle terug te krijgen. Dit kan leiden tot ernstige verstoringen in de productie en schade aan de reputatie van het bedrijf. Bovendien kan het stilleggen van belangrijke bedrijfsprocessen ook leiden tot vertragingen in de levering van producten, wat de hele supply chain kan beïnvloeden en resulteren in een grootschalige economische impact. Daarom is het interessant om een onderzoek te doen naar de meest effectieve firewalltoepassingen die het ICS van een productiebedrijf beter kunnen beschermen. 
+
+Er worden verschillende methodes gebruikt, waaronder een uitgebreide literatuurstudie en analyse op basis van een casestudy. Ook zullen systeembeheerders hun kennis delen omtrent ICS aanvallen. Vorige attacks op de ICS zullen worden geanalyseerd en kunnen ons waardevolle inzichten geven over de aanvallen die het vaakst voorkomen op het ICS. Ook zal er gekeken worden naar de ICS aanvallen die over de hele wereld worden uitgevoerd. Hierdoor zullen we niet enkel nuttige data kunnen verzamelen over aanvallen die al gebeurd zouden zijn op het ICS van VPK, maar ook over aanvallen die mogelijks zouden kunnen gebeuren.
+
+Hierdoor ontstaat er een overzicht van de manieren waarop productie bedrijven hun netwerken beveiligen en zal ook de firewall op een zo effectief mogelijke manier kunnen werken. Deze resultaten duiden niet alleen de effectiviteit van deze firewalltoepassingen aan, maar dienen ook voor het verbeteren van de algemene netwerkbeveiligingsstrategieën binnen het productiebedrijf.
+
+Bovendien kan er besloten worden dat een een firewall een belangrijke rol blijft spelen in het beschermen van het ICS van het productiebedrijf tegen aanvallen van buitenaf. Er wordt nogmaals benadrukt hoe belangrijk firewalls zijn binnen het productiebedrijf die hightech werktuigen en systemen gebruiken die met elkaar verbonden zijn, enerzijds via het interne netwerk. En anderzijds door de verbinding met andere spelers in de supply chain zoals: leveranciers, klanten, ...
