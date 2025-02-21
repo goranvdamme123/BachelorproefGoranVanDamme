@@ -22,11 +22,16 @@ Ondanks de snelle evolutie van firewalls blijft een groot struikelblok bij het t
   
 \subsection{Belang van cybersecurity in een productieomgeving}
 
-De golfkartonindustrie is sterk afhankelijk van onderling verbonden systemen, waardoor cybersecurity essentieel is. OT zal belangrijke productieprocessen gaan beheren, zoals het snijden en printen van golfkarton en zorgt zo voor efficiëntie en kwaliteit. De groeiende connectiviteit brengt risico's van cyberaanvallen met zich mee die de continuïteit kunnen verstoren en gevoelige data in gevaar kunnen brengen. \autocite{fefco2025}
+De golfkartonindustrie is sterk afhankelijk van onderling verbonden systemen, waardoor cybersecurity essentieel is. OT zal belangrijke productieprocessen gaan beheren die grondstoffen omzetten in nauwkeurige verpakkingen van hoge kwaliteit, zoals het snijden en printen van golfkarton en zorgt zo voor efficiëntie en kwaliteit. Ook zal real-time bewaking binnen deze systemen de productkwaliteit op peil houden en zo verspilling minimaliseren. Door het monitoren van de machine zal er efficiënter kunnen worden ingespeeld op het onderhoud waardoor deze machines een langere levensduur zullen hebben. Naarmate OT-systemen en CPS meer met elkaar verbonden raken, is het van cruciaal belang om ze te beveiligen tegen cyberbedreigingen. Een inbreuken de productie verstoren, de kwaliteit in gevaar brengen en gevoelige informatie blootleggen. In de huidige industrie beschermt robuuste OT beveiliging zowel de productie-integriteit als de bedrijfscontinuïteit. \autocite{fefco2025}
 
 Deze toename in connectiviteit tussen systemen zorgt er niet alleen voor dat nieuwe eisen nodig zijn op het vlak van cybersecurity, maar heeft ook een impact op de bescherming van het ICS zeker als we weten dat de beveiliging van het ICS lange tijd als minder belangrijk werd beschouwd. Vaak werd er gewerkt met "security through obscurity" wat betekent dat systemen werden beschermd door informatie geheim te houden in plaats van echte beveiligingsmaatregelen te implementeren. Dit werkte redelijk goed voor oudere systemen, omdat ze enkel in contact stonden met apparaten vanop het eigen netwerk en amper verbonden waren met apparaten buiten hun netwerk. Bij de derde en tevens ook nieuwste generatie ICS is deze aanpak echter veel minder effectief. Moderne systemen maken gebruik van open technologieën om te communiceren met andere niet ICS netwerken, waaronder het internet. Hierdoor is de beveiliging door onduidelijkheid niet langer voldoende, omdat aanvallers steeds beter bekend zijn met de gebruikte technologieën en kwetsbaarheden makkelijker kunnen vinden. \autocite{knowles2015}
 
 
+\subsection{Verschil tussen IT en OT infrastructuur en beveiliging}
+
+OT omvat een breed scala aan programmeerbare systemen en apparaten die direct of indirect in interactie zullen gaan met de fysieke omgeving. Veelvoorkomende OT-toepassingen zijn Supervisory Control and Data Acquisition (SCADA) voor grootschalige procesmonitoring, Programmable Logic Controllers (PLC) voor de besturing van machines en productielijnen. Daarnaast omvat OT ook de Industrial Internet of Things (IIoT) voor het verbinden van industriële apparaten en sensoren. OT kan worden ingezet voor het monitoren, besturen en automatiseren van industriële processen, transport en energiebeheer. Deze systemen bestaan uit verschillende onderdelen met elk eigen functies. Zoals mechanische, elektrische, hydraulische en pneumatische onderdelen, die samenwerken om bepaalde doelstelling te behalen. \autocite{Stouffer2023}.
+
+Hoewel OT-systemen traditioneel geïsoleerd waren, worden ze steeds vaker gekoppeld aan IT-netwerken, wat voordelen biedt op het gebied van efficiëntie en gegevensanalyse, maar ook nieuwe beveiligingsrisico’s met zich meebrengt. Daarom is een robuuste beveiligingsarchitectuur essentieel voor het waarborgen van de betrouwbaarheid en integriteit van OT-systemen. \autocite{Stouffer2023}.
 
 
 
@@ -37,7 +42,19 @@ Deze toename in connectiviteit tussen systemen zorgt er niet alleen voor dat nie
 
 
 
+\section{verschillende dreigingen op het ICS}
+
+\subsection{Specifieke ICS aanvallen}
+
+De laatste jaren is het cyberbeveiligingsbewustzijn sterk gegroeid, dit komt onder andere door verschillende grootschalige cyberaanvallen die de afgelopen jaren plaatsvonden. Een van de eerste grootschalige aanvallen die het gedachtegoed rond cybersecurity heeft veranderd is het Stuxnet-incident in 2010, dat gericht was op de Iraanse kerncentrale Natanz en ongeveer 25\% van de centrifuges voor uraniumverrijking beschadigde. \autocite{Zetter2014}. 
+
+Ook viel de Shamoon-malware in 2012 het Saudische oliebedrijf Saudi Aramco en het Qatarese aardgasbedrijf RasGas aan, waarbij data werd vernietigd en geïnfecteerde systemen onbruikbaar werden \autocite{Hemsley2018}.
+In diezelfde bron wordt er ook gesproken over een van de eerste publieke bekende cyberaanvallen op het elektriciteitsnet, een aanval op Oekraïense energiebedrijf in 2015 ervoor zorgde dat bijna een kwart miljoen mensen zonder elektriciteit kwamen te zitten.
+
+Echter zijn niet alle cyberaanvallen succesvol, volgens \textcite{Margolin2021} zou februari 2021 de Bruce T. Haddock Water Treatment Plant in Florida gehackt zijn door cybercriminelen. Die plant gebruikte een verouderd besturingssysteem waardoor de hacker toegang kreeg tot het computersysteem en de chemische niveaus van de watervoorziening kon wijzigen. De aanval werd ontdekt nog voordat er grote schade kon worden aangebracht.
 
 
+
+Volgens \textcite{Morgan2024} Werd de schade die cyberattacks aangericht zouden hebben in 2024 geschat op 9,5 biljoen dollar. Nu is de schatting voor de schade die ze zullen aanrichten in 2025 geschat op 10,5 biljoen dollar, dat is een steiging van maarliefst 15\% . Dit maakt dat cybercriminaliteit de op twee na grootste economie ter wereld is, na de VS en China.
 
 
