@@ -19,12 +19,20 @@ Vandaag de dag wordt er als maar meer gebruik gemaakt van Next Generation Firewa
 
 Ondanks de snelle evolutie van firewalls blijft een groot struikelblok bij het toepassen hiervan de complexiteit van bedrijfsnetwerken. Volgens \textcite{Bringhenti2023} wordt het configureren van security functies typisch nog steeds manueel gedaan. Maar omdat moderne netwerken zodanig complex en dynamisch zijn, is de manuele configuratie hiervan niet haalbaar. Dit zorgt ervoor dat het kiezen van een gepaste firewall niet alleen draait om de manier waarop mogelijke threats worden afgehandeld, maar ook de manier waarop de automatisatie en configuratie zullen kunnen worden toegepast.
 
+
+
+\subsection{Evolutie van firewalls}
+Firewalls bestaan al sinds de jaren’ 80, toendertijd deden firewalls slechts enkel aan basic packet filtering. Sindsdien zijn firewalls steeds blijven evolueren, enerzijds door de groeiende digitalisering en anderzijds door de grotere cyberdreigingen tegen industriële infrastructuur van productiebedrijven \autocite{Wusteney2021}. 
+Vandaag de dag wordt er gebruik gemaakt van Next Generation Firewalls (NGFW’s) die diepe packet inspection uitvoeren en op basis hiervan beslissen of een pakket wordt geblokkeerd of niet. Sedert 2020 maken deze NGFW’s ook gebruik van Kunstmatige Intelligentie (AI) \textcite{Ahmadi2023}. Firewalls die gebruik maken van AI genereren beveiligingsmaatregelen en dwingen deze af op basis van het continue netwerkverkeer, waardoor de blootstelling aan nieuwe bedreigingen aanzienlijk wordt verminderd \textcite{PaloAltoFW2024}.
+
   
 \subsection{Belang van cybersecurity in een productieomgeving}
 
 De golfkartonindustrie is sterk afhankelijk van onderling verbonden systemen, waardoor cybersecurity essentieel is. OT zal belangrijke productieprocessen gaan beheren die grondstoffen omzetten in nauwkeurige verpakkingen van hoge kwaliteit, zoals het snijden en printen van golfkarton en zorgt zo voor efficiëntie en kwaliteit. Ook zal real-time bewaking binnen deze systemen de productkwaliteit op peil houden en zo verspilling minimaliseren. Door het monitoren van de machine zal er efficiënter kunnen worden ingespeeld op het onderhoud waardoor deze machines een langere levensduur zullen hebben. Naarmate OT-systemen en CPS meer met elkaar verbonden raken, is het van cruciaal belang om ze te beveiligen tegen cyberbedreigingen. Een inbreuken de productie verstoren, de kwaliteit in gevaar brengen en gevoelige informatie blootleggen. In de huidige industrie beschermt robuuste OT beveiliging zowel de productie-integriteit als de bedrijfscontinuïteit. \autocite{fefco2025}
 
 Deze toename in connectiviteit tussen systemen zorgt er niet alleen voor dat nieuwe eisen nodig zijn op het vlak van cybersecurity, maar heeft ook een impact op de bescherming van het ICS zeker als we weten dat de beveiliging van het ICS lange tijd als minder belangrijk werd beschouwd. Vaak werd er gewerkt met "security through obscurity" wat betekent dat systemen werden beschermd door informatie geheim te houden in plaats van echte beveiligingsmaatregelen te implementeren. Dit werkte redelijk goed voor oudere systemen, omdat ze enkel in contact stonden met apparaten vanop het eigen netwerk en amper verbonden waren met apparaten buiten hun netwerk. Bij de derde en tevens ook nieuwste generatie ICS is deze aanpak echter veel minder effectief. Moderne systemen maken gebruik van open technologieën om te communiceren met andere niet ICS netwerken, waaronder het internet. Hierdoor is de beveiliging door onduidelijkheid niet langer voldoende, omdat aanvallers steeds beter bekend zijn met de gebruikte technologieën en kwetsbaarheden makkelijker kunnen vinden. \autocite{knowles2015}
+
+Ondanks de snelle evolutie van firewalls blijft een groot struikelblok bij het toepassen hiervan de complexiteit van bedrijfsnetwerken. Volgens Bringhenti e.a. (2023) wordt het configureren van security functies typisch nog steeds manueel gedaan. Maar omdat moderne netwerken zodanig complex en dynamisch zijn, is de manuele configuratie hiervan niet haalbaar. Het kiezen van een gepaste firewall draait niet alleen om hoe mogelijke bedreigingen worden afgehandeld, maar ook om hoe automatisatie en configuratie kunnen worden toegepast.
 
 
 \subsection{Verschil tussen IT en OT infrastructuur en beveiliging}
@@ -67,6 +75,37 @@ Volgens \textcite{Cisa2025} kan je de verschillende vormen van insider threats o
 Aan de andere kant heb je ook de opzettelijke bedreigingen, vaak zijn de acties die worden ondernomen om een organisatie schade toe te brengen voor persoonlijk voordeel of om te handelen op basis van een persoonlijke grief. Veel insiders zijn bijvoorbeeld gemotiveerd om “wraak te nemen” vanwege een waargenomen gebrek aan erkenning of ontslag. Hun acties kunnen bestaan uit het lekken van gevoelige informatie, het lastigvallen van medewerkers, het saboteren van apparatuur, het plegen van geweld of het stelen van bedrijfseigen gegevens of intellectueel eigendom in de valse hoop hun carrière te bevorderen.\autocite{Cisa2025}
 
 De derde categorie kan gezien worden als een collectie van alle andere minder voorkomende threats. Een van deze threats zijn bedreigingen van derden dit zijn meestal aannemers of verkopers die formeel geen deel zijn van een organisatie, maar die op een bepaalde manier toegang hebben gekregen tot faciliteiten, systemen of netwerken. \autocite{Cisa2025}
+
+
+
+\subsection{Verschillende soorten cyberattacks}
+Het gebruiken van online tools en het uitbuiten van kwetsbaarheden in verschillende computersystemen om zo geld te verdienen is geen nieuw begrip. Het zit zelfs zo dat nog voor men computersystemen had zoals we deze vandaag kennen er al verschillende elektronische communicatie systemen werden gebruikt voor het stelen van informatie. Volgens \textcite{Monroe2025} zou de eerste cyberaanval hebben plaatsgevonden in 1834, in deze cyberaanval zouden twee dieven financiële data hebben gestolen door het Franse telegraaf systeem te hacken. 
+
+Sindsdien is het scala aan verschillende types van cyberdreigingen steeds uitgebreid. Een van de meest gebruikte en makkelijkste manieren om toegang te verkrijgen tot bepaalde systemen is phising, volgens \textcite{jagatic2007} is phishing een vorm van misleiding waarbij een aanvaller op frauduleuze wijze gevoelige informatie van een slachtoffer probeert te verkrijgen door zich voor te doen als een betrouwbare entiteit. Een phisher die zich bijvoorbeeld voordoet als een groot bankbedrijf zal een redelijke opbrengst hebben, ondanks dat hij weinig tot niets weet over de ontvanger. 
+
+In het algemeen gebeurd een phising aanval in vier verschillende stappen. Eerst zal de aanvaller het vertrouwen van het slachtoffer proberen te winnen door zich voor te doen als een betrouwbare persoon of organisatie door gebruik te maken van valse websites, e-mails of applicaties, zodat het slachtoffer gewenste acties uitvoert, zoals het klikken op links of beantwoorden van een e-mail. Vervolgens zal er een doorverwijzing plaatsvinden, waarbij het slachtoffer via een link op een phishingwebsite terechtkomt die vaak exact hetzelfde eruitziet al de legitieme website en daar zijn inloggegevens invoert. In de derde stap verkrijgt de aanvaller deze gegevens via de een formulier/website of direct via mail. Tot slot voert de aanvaller identiteitsfraude of financiële fraude uit met de verkregen informatie. \autocite{varshney2024}
+
+Echter zal niet elke cyberaanval gefocust zijn op het verkrijgen van informatie die verder verwerkt kan worden. Er zijn ook verschillende cyberaanvallen waarbij de focus wordt gelegd op het verstoren van de service die bepaalde systemen bieden. Een van de meest bekende aanvallen van dit type is de DDoS (Distributed Denial of Service) attacks. Volgens \textcite{Baker2024} is een DDoS aanval een kwaadaardige, gerichte aanval die een netwerk overspoelt met valse verzoeken om de bedrijfsactiviteiten te verstoren. Hierdoor zal de server die deze verzoeken zal verwerken overbelast geraken en geen andere legitieme verzoeken meer kunnen verwerken hierdoor kunnen gebruikers geen algemene taken uitvoeren, zoals toegang krijgen tot hun e-mail inbox, websites of andere bronnen die worden beheerd door een aangetaste computer of een aangetast netwerk. Omdat er op deze manier geen gegevens worden verkregen kan het meestal worden opgelost zonder losgeld te betalen. Echter kost het de organisatie tijd, geld en andere middelen om kritieke bedrijfsactiviteiten te herstellen.
+
+Omdat cyberaanvallen op industriële netwerken vaak worden gepleegd door ervaren hackers is het belangrijk om de verschillende aanvallen die gebruikt kunnen worden en de verschillende stadia die doorlopen worden te begrijpen. We kunnen verschillende cyberaanvallen vaak gaan onderbrengen in twee categorieën. gerichte en ongerichte aanvallen. Bij een gerichte aanval zal de attacker zich vaak focussen op een specifieke organisatie, vaak zal dit gebeuren in opdracht van iemand anders. De voorbereiding voor het uitvoeren van de cyberaanval duurt vaak het langst, dit komt omdat de aanvaller de meest effectieve manier wil vinden om het systeem te compromitteren. Dit type aanval vormt een grotere dreiging en maakt gebruik van technieken zoals spear phishing, botnets en supply chain-aanvallen. Een ongerichte aanval daarentegen is breed opgezet en richt zich op zoveel mogelijk slachtoffers, vaak door gebruik te maken van de beschikbaarheid van het internet. Hierbij worden methoden zoals phishing, ransomware en grootschalige scans toegepast. \autocite{biju2019}
+
+\subsection{Oplossingen voor de complexiteit van een firewall implementatie.}
+
+Ondanks de snelle evolutie van firewalls blijft een groot struikelblok bij het toepassen hiervan de complexiteit van bedrijfsnetwerken. Volgens \textcite{Bringhenti2023} wordt het configureren van security functies typisch nog steeds manueel gedaan. Maar omdat moderne netwerken zodanig complex en dynamisch zijn, is de manuele configuratie hiervan niet haalbaar. Het kiezen van een gepaste firewall draait niet alleen om hoe mogelijke bedreigingen worden afgehandeld, maar ook om hoe automatisatie en configuratie kunnen worden toegepast.
+
+Er is een manier om de complexiteit van een groot bedrijfsnetwerk te verminderen door het toepassen van netwerksegmentatie \autocite{Bringhenti2023}. Hierdoor wordt het schrijven van veiligheidsmaatregelen beheersbaar en kunnen er robuuste security policies worden opgesteld voor het netwerk. Palo Alto Networks is een van de marktleiders op het vlak van cybersecurity-toepassingen, waaronder NGFW’s, cloud-based security services, advanced endpoint protection en threat intelligence \autocite{TechnicalWhitepaper2014}.
+
+Palo Alto heeft bijvoorbeeld een cloud-based malware protection engine genaamd WildFire. WildFire is een Intrusion Detection System (IDS) die bestanden, die als mogelijke dreiging worden gecategoriseerd, uitvoert in een sandbox omgeving. Hier worden de dreigingen geanalyseerd met behulp van machine learning algoritmes die gedrag en patronen detecteren die indicatief zijn voor kwaadaardige activiteit \autocite{PaloAltoWF2024}.
+
+
+
+
+
+
+
+
+
+
 
 
 
