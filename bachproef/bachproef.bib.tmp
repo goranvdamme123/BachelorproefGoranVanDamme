@@ -80,7 +80,7 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   year      = {2014},
 }
 
-@WWW{paloAltoSF2025,
+@Article{paloAltoSF2025,
   author  = {{Palo Alto Networks}},
   date    = {2025-02-13},
   title   = {What is a statefull firewall},
@@ -100,7 +100,7 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   urldate = {2024-05-10}
 }
 
-@WWW{PaloAltoFW2024,
+@Online{PaloAltoFW2024,
   author  = {{Palo Alto Networks}},
   date    = {2025-02-16},
   title   = {The History of Firewalls | Who Invented the Firewall?},
@@ -174,7 +174,7 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   urldate = {2025-02-21},
 }
 
-@WWW{Cisa2025,
+@Article{Cisa2025,
   author       = {Cisa},
   date         = {2025-02-21},
   journaltitle = {Physical Security: Insider Threat Mitigation},
@@ -199,7 +199,6 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   volume  = {6},
   journal = {International Research Journal of Engineering and Technology},
   year    = {2019},
-  url     = {https://www.irjet.net/archives/V6/i3/IRJET-V6I31244.pdf}
 }
 
 @Article{jagatic2007,
@@ -211,10 +210,9 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   journal   = {Communications of the ACM},
   publisher = {ACM New York, NY, USA},
   year      = {2007},
-  url       = {https://www.researchgate.net/publication/220424040_Social_phishing}
 }
 
-@WWW{Monroe2025,
+@Article{Monroe2025,
   author  = {{Monroe University}},
   date    = {2025},
   title   = {Cybersecurity History: Hacking & Data Breaches},
@@ -230,15 +228,13 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   journal   = {Expert Systems with Applications},
   publisher = {Elsevier},
   year      = {2024},
-  url       = {https://www.researchgate.net/publication/375098509_Anti-phishing_A_comprehensive_perspective},
-  
 }
 
 @WWW{Baker2024,
   author  = {Kurt Baker},
   date    = {2024-05-13},
-  title   = {12 Most Common Types of Cyberattacks},
   editor  = {Crowdstrike},
+  title   = {12 Most Common Types of Cyberattacks},
   url     = {https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/common-cyberattacks/#2.-DoS-Attacks},
   urldate = {2025-02-23},
 }
@@ -272,7 +268,7 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   year      = {2021},
 }
 
-@WWW{Nist2025,
+@Article{Nist2025,
   author  = {{National Institute Of Cybersecurity}},
   date    = {2025-02-27},
   title   = {Glossary Human-Machine Interface},
@@ -280,7 +276,7 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   urldate = {2025-02-25},
 }
 
-@WWW{Inductive2025,
+@Article{Inductive2025,
   author  = {{Inductive Automation}},
   date    = {2025-02-27},
   title   = {HMI: Human-Machine Interface},
@@ -288,7 +284,7 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   urldate = {2025-02-26},
 }
 
-@WWW{unitronics2025,
+@Article{unitronics2025,
   author  = {Unitronics},
   date    = {2025-02-27},
   title   = {What is the definition of "PLC"?},
@@ -296,7 +292,7 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   urldate = {2025-02-27},
 }
 
-@WWW{FortinetSC2025,
+@Article{FortinetSC2025,
   author  = {Fortinet},
   date    = {2025-02-25},
   title   = {What Is SCADA And SCADA System?},
@@ -304,7 +300,7 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   urldate = {2025-02-27},
 }
 
-@WWW{Copadata2025,
+@Article{Copadata2025,
   author  = {CopaData},
   date    = {2025-02-27},
   title   = {What is HMI?},
@@ -316,7 +312,7 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   author  = {{Industrial Defender}},
   date    = {2025-02-26},
   title   = {How to Apply the NIST Cybersecurity Framework in ICS},
-  url     = {https://www.industrialdefender.com/blog/how-to-apply-nist-cybersecurity-framework-ics},
+  url     = {https://www.industrialdefender.com/blog/how-to-apply-nist-cybersecurity-framework-ics#:~:text=The Framework Core is comprised,take to reduce cyber risk.},
   urldate = {2025-02-27},
 }
 
@@ -348,7 +344,7 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   urldate = {2025-02-27},
 }
 
-@WWW{FortinetDE2025,
+@Article{FortinetDE2025,
   author  = {Fortinet},
   date    = {2025-02-27},
   title   = {What is Defense In Depth?},
@@ -356,7 +352,7 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   urldate = {2025-02-27},
 }
 
-@WWW{VanLeeuwen2025,
+@Article{VanLeeuwen2025,
   author  = {Van Leeuwen, Nino and Shankar, Sahtie},
   date    = {2025},
   title   = {Eight Things You Need to Know About NIS2},
@@ -364,7 +360,7 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   urldate = {2025-02-26},
 }
 
-@WWW{Ey2025,
+@Article{Ey2025,
   author  = {EY},
   date    = {2025-02-27},
   title   = {Are you ready for NIS2 how will it impact your organisation are you prepared?},
@@ -396,7 +392,7 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   urldate = {2025-02-27},
 }
 
-@WWW{Mathezer2021,
+@Article{Mathezer2021,
   author  = {Mathezer, Stephen},
   date    = {2021-07-16},
   title   = {Stephen MathezerStephen MathezerIntroduction to ICS Security Part 2},
@@ -420,7 +416,7 @@ abstract = {Contemporary industrial control systems no longer operate in isolati
   urldate = {2025-03-06},
 }
 
-@WWW{paloGuard2025,
+@Article{paloGuard2025,
   author  = {{Palo Guard}},
   date    = {2025-03-06},
   title   = {Palo Alto Networks Next-Generation Firewall Features},
