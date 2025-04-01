@@ -81,6 +81,60 @@ Beide methoden brengen aanzienlijke beveiligingsrisico’s met zich mee. Veel va
 
 
 
+\section{SWOT Analyse}
+Een SWOT-analyse is handig om een duidelijk beeld te krijgen van een situatie. Het laat zien wat goed gaat en wat beter kan. Ook helpt het om opportunities te ontdekken en mogelijke threats op tijd te zien. Door alles op een rij te zetten, worden er geen belangrijke dingen vergeten. Dit maakt het makkelijker om goede keuzes te maken. Het helpt ook om beter na te denken over wat wel en niet werkt. Zo kan een plan sterker worden en beter voorbereid zijn op risico’s. Met een SWOT-analyse is er meer grip op de situatie. Dit zorgt ervoor dat de kans op succes groter wordt.
+
+
+\subsection{Strengths}
+\begin{itemize}
+\item \texttt{\textbf{Extra laag bescherming:} Er is al een Palo Alto (PA) firewall aanwezig, wat betekent dat de Sophos firewall een extra laag van bescherming biedt. Dit is positief omdat het netwerk al enige beveiliging heeft, en de extra firewall kan helpen om de beveiliging verder te versterken.}
+
+\item \texttt{\textbf{De setup werkt, ook al is hij niet optimaal:} De huidige netwerkconfiguratie werkt wel, ook al is hij niet perfect. Dit betekent dat er geen grote storingen of onderbrekingen zijn, maar er is nog ruimte voor verbetering.}
+
+
+\end{itemize}
+
+\subsection{Weaknesses}
+
+\begin{itemize}
+\item \texttt{\textbf{Complexiteit door de Sophos firewall:} De Sophos firewall maakt het netwerkbeheer onnodig complex. Deze firewall voegt weinig extra waarde toe, maar maakt troubleshooting en het algemene beheer moeilijker. Het zou efficiënter zijn om een uniformere oplossing te hebben die makkelijker te beheren is zoals een Palo Alto firewall.}
+
+\item \texttt{\textbf{Problemen met switches en netwerkinfrastructuur:} Er zijn loops in het netwerk, unmanaged switches die fysiek niet bereikbaar zijn voor VPK, en oude HP switches die verouderd zijn. Deze zaken maken het netwerk moeilijker te beheren en kunnen leiden tot onverwachte storingen.}
+
+\item \texttt{\textbf{Gebrek aan documentatie:} Het netwerk is slecht gedocumenteerd en niemand binnen het T team van Alizay kent de volledige netwerktopologie. Dit maakt het lastig om het netwerk te beheren, te troubleshooten of wijzigingen door te voeren zonder risico’s.}
+
+\item \texttt{\textbf{Slechte firewallconfiguratie:} De huidige configuratie van de Sophos firewall is niet optimaal. Er zijn onnodige statische routes en ineffectieve firewallregels, wat zorgt voor extra complexiteit en mogelijk ook kwetsbaarheden in de beveiliging.}
+
+\item \texttt{\textbf{Verouderde switches:} De HP switches die al sinds 2002 in gebruik zijn, hebben geen updates meer ontvangen. Dit maakt ze kwetsbaar voor beveiligingsrisico’s en zorgt ervoor dat ze niet optimaal functioneren.}
+\end{itemize}
+    
+\subsection{Opportunities}
+
+\begin{itemize}
+\item \texttt{\textbf{Uniformiteit creëren door de Sophos firewall te verwijderen:} Door de Sophos firewall te verwijderen, kan het netwerk binnen alle VPK-sites op dezelfde manier worden ingericht. Dit maakt het beheer veel eenvoudiger en efficiënter, doordat er één gestandaardiseerde opstelling is.}
+
+\item \texttt{\textbf{Vervangen van oude switches:} De verouderde switches kunnen worden vervangen door modernere en efficientere modellen van Hirschmann of Cisco. Dit verbetert de prestaties van het netwerk en maakt het veiliger in het geheel.}
+
+\item \texttt{\textbf{Netwerkinfrastructuur documenteren:} Door de huidige opstelling te wijzigen is een kans om de nieuwe netwerkstructuur goed te documenteren, wat het beheer en de troubleshooting in de toekomst veel gemakkelijker maakt.}
+
+\item \texttt{\textbf{Vermijden van cyberdreigingen:} Door oude apparatuur en slechte configuraties te verwijderen, wordt de kans op cyberaanvallen en netwerkuitval aanzienlijk verkleind. Dit verhoogt de algehele beveiliging van het netwerk.}
+
+\item \texttt{\textbf{Segmentatie toepassen:} Er is de mogelijkheid om de netwerksegmentatie correct toe te passen, wat de beveiliging en efficiëntie van het netwerk verder kan verbeteren. Dit zorgt ervoor dat verschillende delen van het netwerk beter beschermd worden tegen indringers.}
+
+\end{itemize}
+
+
+\subsection{Threats}
+
+\begin{itemize}
+\item \texttt{\textbf{Verwijdering van de Sophos firewall kan problemen veroorzaken:} Omdat de Sophos firewall diep verweven is in het netwerk, kan het verwijderen ervan onverwachte problemen veroorzaken. Het netwerk kan niet direct goed functioneren zonder aanpassingen, wat risico’s voor de stabiliteit met zich meebrengt.}
+
+\item \texttt{\textbf{Onbekende impact van firewal lverwijdering:} Aangezien het netwerk niet goed gedocumenteerd is, kan het verwijderen van de firewall invloed hebben op onontdekte delen van het netwerk. Dit kan leiden tot onverwachte onderbrekingen of storingen.}
+
+\item \texttt{\textbf{Externe partners kunnen beïnvloed worden:} Er zijn veel externe partners die met het netwerk verbonden zijn, zoals S2I, Evrest, en Valmet. Aanpassingen in het netwerk kunnen gevolgen hebben voor hun apparaten en systemen. Het is dus belangrijk om goed overleg te voeren met deze partners om problemen te voorkomen.}
+
+\item \texttt{\textbf{Moeilijkheden bij storing:} Als er een probleem is met tussenliggende apparaten (zoals switches of routers), kan het voor VPK heel lastig zijn om de oorzaak van het probleem snel te vinden. Dit kan leiden tot lange downtime en verstoringen in de productie.}
+\end{itemize}
 
 
 
