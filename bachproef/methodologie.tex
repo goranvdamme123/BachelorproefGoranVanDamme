@@ -58,7 +58,7 @@ Binnen de verschillende productiesites van VPK wordt gebruikgemaakt van machines
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{fotos/MindaConveyorFotoBP.jpg}
-    \caption[TEMP Minda]{\label{fig:grail} Een Minda conveyor installatie die pallets met kartonnen dozen verplaatst. ©Talina Scholz}
+    \caption[Minda Conveyor]{\label{fig:grail} Een Minda conveyor installatie die pallets met kartonnen dozen verplaatst. ©Talina Scholz}
 \end{figure} 
 
 Deze componenten zijn onderling afhankelijk en wisselen continu data uit om productieprocessen op elkaar af te stemmen. Om deze gegevensuitwisseling mogelijk te maken moet er een betrouwbaar netwerk aanwezig zijn die alle verschillende componenten met elkaar verbindt.
@@ -196,6 +196,7 @@ Volgens \textcite{Cabanillas2011} is een RASCI-matrix is opgebouwd uit twee asse
 
 
 \chapter{Configuratie van de firewall opstelling}
+\label{ch:configFW}
 
 Op basis van de verzamelde info en de huidige problemen op de productiesite van Alizay, lijkt het logisch om te kiezen voor één soort firewall die goed past bij de bestaande infrastructuur en kennis binnen VPK. Een overstap naar een Palo Alto firewall heeft op dat vlak verschillende voordelen.
 
@@ -233,7 +234,7 @@ De nieuwe Palo Alto firewall (PA-440) zou een maximale throughput van 2,6 Gbps h
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[scale=0.41]{fotos/SophosBandWidth.jpg}}
-    \caption[PA High Availability settings]{\label{fig:grail}Totale bandbreedte die gebruikt wordt door de Sophos firewall op de productiesite van FR16}
+    \caption[Sophos firewall bandwidth graph]{\label{fig:grail}Totale bandbreedte die gebruikt wordt door de Sophos firewall op de productiesite van FR16}
 \end{figure}
 
 
@@ -243,12 +244,12 @@ De nieuwe Palo Alto firewall (PA-440) zou een maximale throughput van 2,6 Gbps h
 
 In een Active/Passive-opstelling is er slechts één firewall die gelijktijdig data verwerkt. Dit wordt mogelijk gemaakt door het configureren van HA-links. Deze links zijn cruciaal voor het waarborgen van redundantie, hoge prestaties en synchronisatie tussen firewalls in een HA-pair. Ze stellen de firewalls in staat om met elkaar te communiceren en statusinformatie te delen. Hierdoor kan de passieve firewall moeiteloos de taak van de actieve firewall overnemen bij een eventuele uitval. Zo zorgt de actieve firewall ervoor dat sessie-informatie wordt gedeeld met de passieve firewall, zodat deze altijd over de benodigde sessiegegevens beschikt in het geval van een failover. \autocite{PaloAltoHA2025} \autocite{PaloAltoHAb2025}
 
-In hoofdstuk HOOFDSTUK NUMMER zal een HA verbinding tussen twee firewalls worden geconfigureerd op basis van de behoeften van VPK en de algemene best practices.
+Verder in dit hoofdstuk zal een HA verbinding tussen twee firewalls worden geconfigureerd op basis van de behoeften van VPK en de algemene best practices.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{fotos/PA_FirewallPairBE02.jpg}
-    \caption[Palo Alto ACtive/Passive pair]{\label{fig:grail}Een Palo Alto Active/Passive firewall opstelling in één van de Belgische VPK sites}
+    \caption[Palo Alto Active/Passive pair]{\label{fig:grail}Een Palo Alto Active/Passive firewall opstelling in één van de Belgische VPK sites}
 \end{figure} 
 
 
@@ -286,8 +287,10 @@ Omdat er op het FR16-netwerk tot nu toe nauwelijks of geen monitoring aanwezig w
 
 \textbf{Mode}
     \begin{itemize}[label=\textbullet]
-        \item Zoals in hoofdstuk HOOFDSTUKNUMMER besproken zal er bij de configuratie van een Palo Alto firewallpair binnen een VPK site gebruik worden gemaakt van een Active/Passive opstelling. Hierbij zal er steeds slechts één firewall tegelijk actief zijn.
+        \item Zoals eerder in dit hoofdstuk besproken is zal er bij de configuratie van een Palo Alto firewall pair binnen een VPK site gebruik worden gemaakt van een Active/Passive opstelling. Hierbij zal er steeds slechts één firewall tegelijk actief zijn.
     \end{itemize}
+
+
 
 \textbf{Enable Config Sync}
     \begin{itemize}[label=\textbullet]
@@ -330,6 +333,7 @@ Omdat er op het FR16-netwerk tot nu toe nauwelijks of geen monitoring aanwezig w
     \end{itemize}
 
 
+
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[scale=0.666]{fotos/PA_HASettings.jpg}}
@@ -361,7 +365,7 @@ Om het allemaal overzichtelijk te houden, is het ook aangeraden om de VLAN’s t
         10.x.9.0 & 10.x.9.1 -- 10.x.9.240 & 9 & RF\_Corporate & 10.x.9.254 & /24 \\
         \hline
     \end{tabular}
-    \caption{VLAN's en bijhorende IP-ranges}
+    \caption{Een aantal gebruikte VLAN's binnen het VPK netwerk en bijhorende IP-ranges}
 \end{table}
 
 Uit het bovenstaande voorbeeld kan je afleiden dat er gekozen is om binnen VPK VLAN 8 te gebruiken voor alle servers binnen het netwerk. Zo weten we meteen dat een toestel met een IP-adres in de vorm van x.x.8.x een server is. Deze manier van werken brengt verschillende voordelen met zich mee:
