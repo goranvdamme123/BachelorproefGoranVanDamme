@@ -1,7 +1,6 @@
 %%=============================================================================
 %% Methodologie
 %%=============================================================================
-
 \chapter{\IfLanguageName{dutch}{Methodologie}{Methodology}}%
 \label{ch:methodologie}
 
@@ -32,14 +31,16 @@ Het overgenomen netwerk heeft diverse problemen met de stabiliteit, veiligheid e
  
 Om te beginnen is het OT-netwerk van deze site beveiligd met een firewall van het merk Sophos. Dit vormt een uitdaging, aangezien VPK standaard gebruikmaakt van Palo Alto firewalls voor de beveiliging van alle andere productiesites die ze beheren. Palo Alto biedt een centrale webinterface, genaamd Strata Cloud Manager(SCM), waarmee alle geïmplementeerde firewalls binnen het netwerk op één platform kunnen worden beheerd.
 
-Omdat Sophos-firewalls niet compatibel zijn met SCM, moeten ze afzonderlijk worden beheerd via een eigen online portaal. Dit leidt tot een versnipperde beheeromgeving, waarin netwerkbeheerders meerdere systemen moeten gebruiken om de verschillende firewalls te beheren. Hierdoor neemt de complexiteit toe en wordt het lastiger om een uniforme beveiligingsstrategie te hanteren.
+Omdat Sophos firewalls niet compatibel zijn met SCM, moeten ze afzonderlijk worden beheerd via een eigen online portaal. Dit leidt tot een versnipperde beheeromgeving, waarin netwerkbeheerders meerdere systemen moeten gebruiken om de verschillende firewalls te beheren. Hierdoor neemt de complexiteit toe en wordt het lastiger om een uniforme beveiligingsstrategie te hanteren.
 
 Een bijkomend voordeel van Strata Cloud Manager is dat het niet alleen een centraal overzicht biedt van alle Palo Alto firewalls, maar ook de mogelijkheid geeft om firewallregels op één plek te beheren en automatisch uit te rollen naar specifieke firewalls binnen het netwerk. Dit maakt het eenvoudiger om wijzigingen consistent door te voeren en minimaliseert de kans op fouten bij handmatige configuraties.
 Daarnaast kan het gebruik van verschillende firewallmerken leiden tot inconsistente security policies, verhoogde operationele lasten en een grotere kans op menselijke fouten bij configuraties en monitoring. Om een efficiënter en gestroomlijnder netwerkbeheer te realiseren, zou het migreren van de Sophos firewall naar een andere firewalloplossing, zoals Palo Alto, een logische volgende stap zijn.
 
 Daarnaast heeft niemand binnen het huidige netwerkteam van VPK ervaring met het implementeren en configureren van Sophos firewalls. Hoewel dit op dit moment geen direct probleem vormt voor de huidige firewallopstelling, is het wel een belangrijke factor om in overweging te nemen. Op langere termijn kan het gebrek aan expertise leiden tot verschillende uitdagingen, zoals een incorrecte configuratie van de firewalls door onvoldoende kennis van de specifieke implementatie- en beheerprincipes van Sophos.
 
-Een verkeerde configuratie kan resulteren in beveiligingsrisico’s, verminderde netwerkprestaties of zelfs netwerkstoringen. Om deze risico’s te beperken, kan er overwogen worden om over te stappen op een firewalloplossing die beter aansluit bij de bestaande kennis en beheertools binnen VPK zoals een firewall van Palo Alto.
+Een verkeerde configuratie kan resulteren in beveiligingsrisico’s, verminderde netwerkprestaties of zelfs netwerkstoringen. Om deze risico’s te beperken, kan er overwogen worden om over te stappen op een firewalloplossing die beter aansluit bij de bestaande kennis en beheertools binnen VPK zoals een firewall van Palo Alto.\newline
+
+\textit{note: VPK maakt gebruik van codes om de verschillende sites aan te duiden. Zo verwijst de code ‘FR16’ naar de 16de site van VPK in Frankrijk. Deze site bevindt zich in de Franse gemeente Alizay. Daarom wordt vaak de term ‘Alizay’ gebruikt om naar deze site te verwijzen.}
 
 \begin{figure}[H]
     \centering
@@ -190,7 +191,7 @@ Volgens \textcite{Cabanillas2011} is een RASCI-matrix is opgebouwd uit twee asse
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{fotos/Rasci_TO-BE.png}
-    \caption[Foto Rasci TO-BE]{\label{fig:grail}Rasci tabel voor de toekomstige opstelling.}
+    \caption[Foto Rasci TO-BE]{\label{fig:grail}Rasci tabel voor de toekomstige opstelling in FR16.}
 \end{figure} 
 
 
@@ -215,16 +216,20 @@ High Availability (HA) is een functie die verschillende netwerk apparatuur vendo
 
 \subsection{Active/Active firewall opstelling}
 Bij een Active/Active opstelling verwerken beide apparaten actief data. In dit geval zullen beide firewalls gelijktijdig verkeer filteren op basis van vooraf gedefinieerde firewallregels. Hoewel dit in sommige situaties voordelen kan bieden, is deze opstelling in onze omgeving minder geschikt om meerdere redenen.
+\newline
 
 
-\begin{enumerate}
-    \item \texttt{Active/Active firewall pairs zijn complex om te installeren en onderhouden: Sessie synchronisatie tussen de firewalls kan complex worden, zeker als er gebruik wordt gemaakt van dynamische IP’s binnen het netwerk. Omdat er is besloten in bovenstaande rasci matrix dat het beheer van de OT firewall een verantwoorddelijkheid is van het OT team lijkt het niet verstandig om gebruik te maken van een complexe firewall opstelling omdat de kennis over het beheer van dit soort opstellingen minder groot is bij het OT team.}
+
+\begin{itemize}
+    \item \textbf{Active/Active firewall pairs zijn complex om te installeren en onderhouden:}  Sessie synchronisatie tussen de firewalls kan complex worden, zeker als er gebruik wordt gemaakt van dynamische IP’s binnen het netwerk. Omdat er is besloten in bovenstaande rasci matrix dat het beheer van de OT firewall een verantwoorddelijkheid is van het OT team lijkt het niet verstandig om gebruik te maken van een complexe firewall opstelling omdat de kennis over het beheer van dit soort opstellingen minder groot is bij het OT team. 
     
-    \item \texttt{Kans op asymmetrische sessies: De kans is groter dat beide firewalls onafhankelijk data forwarden, waardoor inbound verkeer via een ander pad kan terugkeren dan outbound traffic. Dit kan leiden tot session mismatches, met als gevolg dat data mogelijk wordt gedropt.}  
+    \item \textbf{Kans op asymmetrische sessies:} De kans is groter dat beide firewalls onafhankelijk data forwarden, waardoor inbound verkeer via een ander pad kan terugkeren dan outbound traffic. Dit kan leiden tot session mismatches, met als gevolg dat data mogelijk wordt gedropt.
     
-    \item \texttt{Inconsistentie met andere sites: Alle andere VPK-sites met een Palo Alto firewall-pair gebruiken een Active/Passive-opstelling. Een Active/Active-configuratie binnen FR16 zou de uniformiteit van de netwerkarchitectuur verstoren}    
-\end{enumerate}
+    \item \textbf{Inconsistentie met andere sites:}  Alle andere VPK-sites met een Palo Alto firewall-pair gebruiken een Active/Passive-opstelling. Een Active/Active-configuratie binnen FR16 zou de uniformiteit van de netwerkarchitectuur verstoren.
 
+\end{itemize}
+
+\newpage
 
 Ook is binnen deze Active/Active opstelling de mogelijkheid om gebruik te maken van parallel processing. Dit zorgt er effectief voor dat throughput verdubbeld wordt. \autocite{Fulp2006} Voor onze use case is dit echter niet relevant. De hoeveelheid data die via de Sophos firewall wordt verstuurd, is zo laag dat één Palo Alto firewall ruim voldoende capaciteit heeft om deze load zonder merkbare vertraging te verwerken. Uit een uitgebreide analyse van het netwerkverkeer op de WAN poort van de Sophos firewall, uitgevoerd over meerdere weken en op verschillende tijdstippen, blijkt dat de maximale gemeten throughput slechts 10 KBps bedroeg.
 
@@ -234,7 +239,7 @@ De nieuwe Palo Alto firewall (PA-440) zou een maximale throughput van 2,6 Gbps h
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[scale=0.41]{fotos/SophosBandWidth.jpg}}
-    \caption[Sophos firewall bandwidth graph]{\label{fig:grail}Totale bandbreedte die gebruikt wordt door de Sophos firewall op de productiesite van FR16}
+    \caption[Sophos firewall bandwidth graph]{\label{fig:grail}Totale bandbreedte die gebruikt wordt door de Sophos OT firewall van de productiesite van FR16}
 \end{figure}
 
 
@@ -249,7 +254,7 @@ Verder in dit hoofdstuk zal een HA verbinding tussen twee firewalls worden gecon
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{fotos/PA_FirewallPairBE02.jpg}
-    \caption[Palo Alto Active/Passive pair]{\label{fig:grail}Een Palo Alto Active/Passive firewall opstelling in één van de Belgische VPK sites}
+    \caption[Palo Alto Active/Passive pair]{\label{fig:grail}Een Palo Alto Active/Passive firewall opstelling in de VPK site van Erembodegem.}
 \end{figure} 
 
 
@@ -263,7 +268,7 @@ Om gebruik te kunnen maken van de HA-functies van de Sophos firewall is het nood
 \section{Verzamelen en verwerken van Logs}
 
 \subsection{Logs via Palo Alto}
-De Palo Alto-firewalls die zich op andere locaties bevinden, verzamelen loggegevens van netwerkverkeer en systeemactiviteiten. Deze logs worden automatisch doorgestuurd naar een centrale server waarop Microsoft Sentinel draait. Microsoft Sentinel is een cloudgebaseerde SIEM-oplossing van Microsoft. SIEM staat voor Security Information and Event Management.
+De Palo Alto firewalls die zich op andere locaties bevinden, verzamelen loggegevens van netwerkverkeer en systeemactiviteiten. Deze logs worden automatisch doorgestuurd naar een centrale server waarop Microsoft Sentinel draait. Microsoft Sentinel is een cloudgebaseerde SIEM-oplossing van Microsoft. SIEM staat voor Security Information and Event Management.
 Volgens BRON verzamelt een SIEM systeem loggegevens uit verschillende bronnen, zoals firewalls, servers, toepassingen en andere netwerkapparaten. Die gegevens worden vervolgens geanalyseerd. Als er iets gebeurt dat afwijkt van het normale gedrag, kan Sentinel dit detecteren in realtime. Het systeem kan daarna automatisch meldingen sturen of zelfs actie ondernemen, zoals het blokkeren van een IP-adres of het starten van een onderzoek. Zo helpt Sentinel bij het vroegtijdig opsporen van cyberdreigingen en bij het verbeteren van de beveiliging van het netwerk.
 
 FOTO SIEM Sentinel WIP (Ik heb zelf geen toegang tot deze portalen, er is een mail verstuurd naar de personen die hier wel toegang tot hebben.)
@@ -273,11 +278,15 @@ Naast Microsoft Sentinel worden de verzamelde loggegevens ook doorgestuurd naar 
 Zabbix verzamelt allerlei metrics zoals CPU-belasting, geheugengebruik, schijfruimte, netwerkactiviteit, enzovoort. Deze informatie wordt weergegeven in een overzichtelijk dashboard dat je via een webinterface kan bekijken. Zo kan er in één oogopslag gezien worden of er problemen zijn met een bepaald systeem of apparaat.
 Zabbix maakt het ook mogelijk om alerts te versturen wanneer bepaalde drempels worden overschreden, bijvoorbeeld als de CPU belasting te hoog is of als een server niet meer reageert. Op die manier kunnen problemen snel worden gedetecteerd en opgelost, voordat ze ernstige gevolgen hebben.
 
-FOTO Zabbix WIP (Ik heb zelf geen toegang tot deze portalen, er is een mail verstuurd naar de personen die hier wel toegang tot hebben.)
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{fotos/SophosZabbix.png}
+    \caption[Sophos Memory Buffer in Zabbix]{\label{fig:grail}Een grafiek uit Zabbix die het geheugengebruik van de memory buffers van de Sophos firewall in Mega Bytes weergeeft.}
+\end{figure} 
 
 
 \subsection{Logs via Sophos}
-Tot voor kort werden er op de Sophos-firewall geen loggegevens verzameld. Hierdoor was er weinig zicht op wat er zich precies afspeelde binnen het netwerkverkeer dat via deze firewall liep. Als onderdeel van mijn bachelorproef heb ik ervoor gezorgd dat de firewall nu wel logs verzamelt en dat deze op een correcte en veilige manier worden doorgestuurd naar de nodige servers die de data analyseren en verwerken.
+Tot voor kort werden er op de Sophos firewall geen loggegevens verzameld. Hierdoor was er weinig zicht op wat er zich precies afspeelde binnen het netwerkverkeer dat via deze firewall liep. Als onderdeel van mijn bachelorproef heb ik ervoor gezorgd dat de firewall nu wel logs verzamelt en dat deze op een correcte en veilige manier worden doorgestuurd naar de nodige servers die de data analyseren en verwerken.
 De loggegevens worden via het syslog-protocol doorgestuurd naar twee verschillende servers: enerzijds de Zabbix monitoringserver en anderzijds de Microsoft Sentinel server. Deze syslog-berichten bevatten nuttige informatie, zoals de actuele firewallregels, de heartbeat van het systeem en verschillende systeemgebeurtenissen.
 Omdat er op het FR16-netwerk tot nu toe nauwelijks of geen monitoring aanwezig was, is deze wijziging van groot belang. Dankzij deze aanpassing kunnen problemen sneller worden opgemerkt. In het geval van downtime of een mogelijke cyberdreiging kan er sneller worden ingegrepen, wat uiteindelijk helpt om schade of downtime te beperken.
 
@@ -331,7 +340,6 @@ Omdat er op het FR16-netwerk tot nu toe nauwelijks of geen monitoring aanwezig w
     \begin{itemize}[label=\textbullet]
         \item Deze optie zorgt ervoor dat er een backup is om de hearbeat berichten van de apparaten op te sturen via de management interfaces van de firewall. Deze berichter zullen standaard over de HA1 en HA2 link worden verstuurd. Aangezien er twee rechtstreekse linken zijn tussen de twee firewalls in het HA pair is het dus niet meer nodig om deze optie aan te zetten.
     \end{itemize}
-
 
 
 \begin{figure}[H]
