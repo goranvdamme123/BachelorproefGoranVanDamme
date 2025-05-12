@@ -3,6 +3,7 @@
 % Meer info op https://github.com/HoGentTIN/latex-hogent-report
 %===============================================================================
 
+
 \documentclass[dutch,dit,thesis]{hogentreport}
 
 % TODO:
@@ -12,6 +13,7 @@
 %   explicit approval!), remove the option "dutch," or replace with "english".
 
 \usepackage{lipsum} % For blind text, can be removed after adding actual content
+\usepackage{acronym} % for acronym list
 
 %% Pictures to include in the text can be put in the graphics/ folder
 \graphicspath{{../graphics/}}
@@ -34,16 +36,6 @@
 }
 
 %% Ensure the list of listings is in the table of contents
-\renewcommand\listoflistingscaption{%
-    \IfLanguageName{dutch}{Lijst van codefragmenten}{List of listings}
-}
-\renewcommand\listingscaption{%
-    \IfLanguageName{dutch}{Codefragment}{Listing}
-}
-\renewcommand*\listoflistings{%
-    \cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{\listoflistingscaption}%
-    \listof{listing}{\listoflistingscaption}%
-}
 
 % Other packages not already included can be imported here
 
@@ -114,11 +106,39 @@
 % lines.
 \listoftables
 
-\listoflistings
 
 % Als je een lijst van afkortingen of termen wil toevoegen, dan hoort die
 % hier thuis. Gebruik bijvoorbeeld de ``glossaries'' package.
 % https://www.overleaf.com/learn/latex/Glossaries
+
+
+% List of abbreviations
+\chapter*{Lijst van afkortingen}
+\addcontentsline{toc}{chapter}{Lijst van afkortingen}
+\begin{acronym}[USA]  % Optional argument to align acronyms
+    \acro{ICS}{Industrial Control System}
+\acro{IT}{Information Technology}
+\acro{OT}{Operational Technology}
+\acro{VPN}{Virtual Private Network}
+\acro{SMART}{Specifiek Meetbaar Acceptabel Realistisch Tijdsgebonden}
+\acro{NGFW}{Next Generation Firewall}
+\acro{AI}{Artificial Intelligence (Kunstmatige Intelligentie)}
+\acro{CPS}{Cyber Physical Systems}
+\acro{SCADA}{Supervisory Control And Data Acquisition}
+\acro{PLC}{Programmable Logic Controller}
+\acro{IIoT}{Industrial Internet of Things}
+\acro{DiD}{Defence in Depth}
+\acro{DMZ}{Demilitarized Zone}
+\acro{SWOT}{Strengths, Weaknesses, Opportunities, Threats}
+\acro{RASCI}{Responsible, Accountable, Support, Consulted, Informed}
+\acro{PROFIBUS}{Process Field Buss}
+\acro{PROFINET}{Process Field Network}
+\acro{HMI}{Human Machine Interface}
+\acro{MOS}{Manufacturing Operations System}
+\acro{IDS}{Intrusion Detection System}
+\acro{DDoS}{Distributed Denial of Service}
+\acro{VLAN}{Virtual Local Area Network}
+\end{acronym}
 
 
 
