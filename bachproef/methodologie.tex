@@ -15,7 +15,7 @@ In het vierde deel zal er worden toegespitst op het perfectioneren van beveiligi
 
 De vijfde en tevens laatste fase zal bestaan uit het evalueren van de impact van de geherconfigureerde firewall en de voorgestelde aanpassingen aan het netwerk. Er zullen een reeks criteria worden opgesteld waaraan voldaan moet zijn. Deze criteria zullen er voor zorgen dat we duidelijk kunnen aantonen dat mogelijke wijzigingen die we hebben aangebracht het makkelijker maken voor de systeembeheerders om ook de firewall te beheren en ze ook een duidelijker inzicht krijgen van welke zaken er juist gebeuren aan de interne kant van de firewall. Daarnaast zal worden beschreven welke specifieke maatregelen het beste kunnen worden genomen om het netwerk en de firewall van het productiebedrijf beter te beschermen tegen aanvallen op het ICS. De geschatte duur van deze fase bedraagt twee dagen, verdeeld over twee weken.  
 
-\chapter{Onderzoek}
+\chapter{Analyse van de huidige opstelling}
 
 \label{ch:onderzoek}
 
@@ -24,11 +24,14 @@ De vijfde en tevens laatste fase zal bestaan uit het evalueren van de impact van
 De eerste fase van dit onderzoek richt zich voornamelijk op het verzamelen van relevante informatie die nodig is voor een weloverwogen keuze van de toekomstige firewallopstelling. Bij de implementatie van IT- of OT-toepassingen binnen een productiesite moet met een groot aantal factoren rekening worden gehouden. De hoogste prioriteit van elke productiesite blijft de continuïteit van de productie. Omdat de implementatie van een nieuwe netwerktopologie verschillende risico’s met zich meebrengt, is het cruciaal om alle mogelijke problemen en scenario’s zorgvuldig in kaart te brengen. Dit voorkomt verstoringen in het productieproces en waarborgt de continuiteit van de productie.
 Een verstoring van de IT-dienstverlening binnen een productiesite heeft niet alleen impact op de IT-apparaten van gebruikers, maar ook op de OT toepassingen, zoals PLC’s, sensoren en SCADA-systemen. Deze systemen spelen een belangerijke rol in het aansturen en monitoren van industriële processen. Wanneer de IT infrastructuur faalt, kunnen deze OT systemen niet meer correct functioneren, dit heeft directe gevolgen voor de productieomgeving. Daarnaast is de werking van machines binnen een productiesite sterk afhankelijk van onderlinge communicatie tussen hen. Ze zijn geprogrammeerd om in een nauwkeurige volgorde en met optimale efficiëntie te opereren, zodat de productie soepel verloopt en de supply chain niet wordt onderbroken. Als de verbinding tussen deze machines wegvalt, ontstaan er onvoorziene stilstanden en inefficiënties die de productie ernstig kunnen vertragen of zelfs volledig stilleggen. Dit heeft niet alleen gevolgen voor de interne werking van de productiesite, maar ook voor externe partners en leveranciers. Transportbedrijven, logistieke dienstverleners en andere samenwerkingspartners ervaren hinder wanneer de supply chain verstoord raakt. De expeditieafdeling, die afhankelijk is van verschillende softwaretools en netwerksystemen zoals SAP voor het plannen en coördineren van leveringen, kan haar taken niet efficiënt uitvoeren zonder een stabiele IT omgeving. Dit leidt tot vertragingen in verzendingen, problemen met voorraadbeheer en mogelijk zelfs financiële verliezen door stilstand en gemiste levertermijnen.
 
-
-\subsection{Problemen met huidige OT Firewall opstelling}
 In 2021 heeft VPK de productiesite van Alizay overgenomen van papierproducent Double A. Met deze overname kreeg VPK niet alleen de productiefaciliteit in handen, maar ook het volledige IT en OT netwerk dat op deze site in gebruik was. Aangezien Double A gebruikmaakte van andere leveranciers voor netwerkapparatuur en eigen best practices hanteerde voor netwerkbeheer, verschilt de opzet van dit netwerk aanzienlijk van de standaard IT/OT-infrastructuur die VPK binnen alle andere productiesites gebruikt.
 Het overgenomen netwerk heeft diverse problemen met de stabiliteit, veiligheid en efficiëntie die de IT en OT systemen in gevaar brengen. Compatibiliteitsproblemen tussen de originele infrastructuur van Alizay en de standaarden van VPK maken het lastig om systemen correct te integreren met elkaar.
- 
+
+
+\subsection{Functie van de Palo Alto firewall binnen FR16}
+\subsection{Functie van de Sophos firewall binnen FR16}
+
+\subsection{Problemen met huidige OT Firewall opstelling}
 Om te beginnen is het OT-netwerk van deze site beveiligd met een firewall van het merk Sophos. Dit vormt een uitdaging, aangezien VPK standaard gebruikmaakt van Palo Alto firewalls voor de beveiliging van alle andere productiesites die ze beheren. Palo Alto biedt een centrale webinterface, genaamd Strata Cloud Manager(SCM), waarmee alle geïmplementeerde firewalls binnen het netwerk op één platform kunnen worden beheerd.
 
 Omdat Sophos firewalls niet compatibel zijn met SCM, moeten ze afzonderlijk worden beheerd via een eigen online portaal. Dit leidt tot een versnipperde beheersomgeving, waarin netwerkbeheerders meerdere systemen moeten gebruiken om de verschillende firewalls te beheren. Hierdoor neemt de complexiteit toe en wordt het lastiger om een uniforme beveiligingsstrategie te hanteren.
@@ -39,8 +42,6 @@ Daarnaast kan het gebruik van verschillende firewallmerken leiden tot inconsiste
 Daarnaast heeft niemand binnen het huidige netwerkteam van VPK ervaring met het implementeren en configureren van Sophos firewalls. Hoewel dit op dit moment geen direct probleem vormt voor de huidige firewallopstelling, is het wel een belangrijke factor om in overweging te nemen. Op langere termijn kan het gebrek aan expertise leiden tot verschillende uitdagingen, zoals een incorrecte configuratie van de firewalls door onvoldoende kennis van de specifieke implementatie- en beheersprincipes van Sophos.
 
 Een verkeerde configuratie kan resulteren in beveiligingsrisico’s, verminderde netwerkprestaties of zelfs netwerkstoringen. Om deze risico’s te beperken, kan er overwogen worden om over te stappen op een firewalloplossing die beter aansluit bij de bestaande kennis en beheertools binnen VPK zoals een firewall van Palo Alto.\newline
-
-\textit{note: VPK maakt gebruik van codes om de verschillende sites aan te duiden. Zo verwijst de code ‘FR16’ naar de 16de site van VPK in Frankrijk. Deze site bevindt zich in de Franse gemeente Alizay. Daarom wordt vaak de term ‘Alizay’ gebruikt om naar deze site te verwijzen.}
 
 \begin{figure}[H]
     \centering
@@ -72,7 +73,7 @@ Beide methoden brengen aanzienlijke beveiligingsrisico’s met zich mee. Veel va
 
 
 \section{SWOT Analyse}
-Een SWOT-analyse is handig om een duidelijk beeld te krijgen van een situatie. Het laat zien wat goed gaat en wat beter kan. Ook helpt het om opportunities te ontdekken en mogelijke threats op tijd te zien. Door alles op een rij te zetten, worden er geen belangrijke dingen vergeten. Dit maakt het makkelijker om goede keuzes te maken. Het helpt ook om beter na te denken over wat wel en niet werkt. Met een SWOT-analyse is er meer grip op de situatie. Dit zorgt ervoor dat de kans op succes groter wordt. SWOT staat voor Strengts, Weaknesses, Opportunities en Threats. Deze vier woorden worden hieronder verder in detail besproken.
+SWOT staat voor Strengts, Weaknesses, Opportunities en Threats.Een SWOT-analyse wordt gebruikt om een duidelijk beeld te krijgen van een situatie. Het laat zien wat goed gaat en wat beter kan. Ook helpt het om opportuniteiten te ontdekken en mogelijke bedreigingen op tijd te zien. 
 
 
 \subsection{Strengths}
@@ -144,10 +145,6 @@ De verschillende letters van RASCI staan voor een bepaald woord dat een bepaalde
 Volgens \textcite{Cabanillas2011} is een RASCI-matrix is opgebouwd uit twee assen: op de horizontale as worden de verschillende rollen binnen het project weergegeven, terwijl de verticale as de diverse taken toont. In elk vakje van de matrix wordt met een enkele letter aangeduid welke rol welke verantwoordelijkheid opneemt voor een bepaalde taak. Zo staat bijvoorbeeld de letter 'R' voor "Responsible. Wanneer bijvoorbeeld de letter 'R' in een bepaald vakje voorkomt, betekent dit dat de overeenkomstige rol op de horizontale as Responsable is voor de taak op de verticale as. \autocite{Cabanillas2011}
 
 \subsection{Verschillende taken binnen deze RASCI matrix}
-\textbf{Inventarisatie van bestaand OT netwerk.}
-\begin{itemize}[label=\textbullet]
-    \item Deze taak omvat het in kaart brengen van alle apparaten binnen het OT-netwerk van FR16. Van elk toestel worden relevante gegevens geregistreerd, zoals het MAC-adres, IP-adres, merk, type en andere nuttige informatie.  
-\end{itemize}
 
 \textbf{Onderhouden documentatie van het OT netwerk.}
 \begin{itemize}[label=\textbullet]
@@ -193,6 +190,96 @@ Volgens \textcite{Cabanillas2011} is een RASCI-matrix is opgebouwd uit twee asse
     \includegraphics[width=1\textwidth]{fotos/Rasci_TO-BE.png}
     \caption[Foto Rasci TO-BE]{\label{fig:grail}Rasci tabel voor de toekomstige opstelling in FR16.}
 \end{figure} 
+
+
+\chapter{Vergelijken van de PA en Sophos firewall}
+
+
+\section{RFP als leidraad voor doordachte keuzes.}
+Sinds 2015 maakte VPK gebruik van stateful firewalls zonder NGFW functionaliteiten. Om de overstap te maken naar next generation firewalls (NGFW), diende VPK een Request for Proposal (RFP) in bij zowel Telenet als Proximus. In deze RFP werden diverse criteria opgenomen waaraan een toekomstige NGFW moest voldoen om in aanmerking te komen voor implementatie op alle VPK sites.
+
+De destijds opgestelde RFP blijft vandaag de dag nog steeds relevant en kan nog steeds dienen als basis voor een doordachte keuze bij het maken van een eventuele overstap naar een andere NGFW. In deze studie zullen daarom verschillende criteria uit die oorspronkelijke RFP worden gebruikt om de functionaliteiten van de huidige Sophos en Palo Alto firewalls met elkaar te vergelijken.
+
+
+
+
+\section{Vergelijking van verschillende firewall functionaliteiten}
+In dit onderzoek maken we gebruik van twee verschillende firewalls om een vergelijking te kunnen maken. Voor Palo Alto gebruiken we de PA-440, aangezien dit type firewall het meest is geïmplementeerd op de meeste VPK productiesites. Voor Sophos gebruiken we de XGS 136, omdat deze firewall momenteel actief is binnen het OT-netwerk van de FR16-site.
+
+In de RFP die VPK in 2015 heeft opgesteld, worden meer dan 150 criteria voorgesteld, verdeeld over vier verschillende categorieën. Hieronder staat per categorie een toelichting op de specifieke inhoud ervan.
+
+LIJST MET CATEGORIEËN
+
+Deze studie is echter niet uitgebreid genoeg om alle criteria waaraan NGFW’s moeten voldoen grondig te vergelijken. Daarom hebben verschillende IT professionals binnen VPK een lijst opgesteld met de belangrijkste criteria waaraan een moderne firewall moet voldoen. Beide firewalls zullen worden vergeleken aan de hand van de lijst met vooropgestelde criteria.
+
+
+\subsection{Criteria van de `General` categorie}
+
+\textbf{Product provides Next-Generation Firewall functionality}
+
+Binnen deze criteria zullen de twee firewalls worden vergeleken op basis van hun mogelijkheden binnen het gebruiken van NGFW functies. Waar we vooral op gefocust zullen zijn is het vergelijken van de verschillende cloud gebaseerde threat intelligence oplossingen die beide vendoren aanbieden.
+
+\textbf{Palo Alto}
+\begin{itemize}[label=\textbullet]
+    \item De PA-440 firewall is NGFW die gebruikmaakt van geavanceerde machine learning technieken om cyberdreigingen in real-time te detecteren en te blokkeren. Dankzij die ML tool is de firewall in staat om zogenaamde "inline signatureless attacks", dat zijn aanvallen zonder herkenbare handtekening, proactief te identificeren en te stoppen, nog voordat ze schade kunnen aanrichten. Daarnaast maakt de PA-440 gebruik van Layer 7 (L7) packet inspection, wat betekent dat het netwerkverkeer wordt geanalyseerd op basis van applicatie in plaats van uitsluitend op poortniveau. Hierdoor kan de firewall bepalen welke applicatie het verkeer genereert en ook de inhoud van de data inspecteren op verdachte of kwaadaardige patronen via AI. Dit biedt een veel effectiever beveiligingsniveau dan traditionele L4 gebaseerde inspectie. \autocite{PaloAltoDS2025}
+    
+    Om gebruik te maken van de ML functies van de PA-440 zal je moeten beschikken over een `Active threat prevention license` volgens \textcite{PaloGuardb2025} zou je jaarlijks 235 euro moeten betalen per apparaat. Wanneer je dus gebruik maakt van een HA pair zal je dus in totaal jaarlijks 470 euro moeten betalen voor deze functie.
+\end{itemize}
+
+\textbf{Sophos}
+\begin{itemize}[label=\textbullet]
+    \item Sophos maakt gebruik van extended detection and response (XDR). XDR is een cyberbeveiligingsaanpak die bedreigingen identificeert door informatie van meerdere beveiligingsoplossingen samen te voegen, waardoor detectie, onderzoek en reactie worden geautomatiseerd en versneld op manieren die met geïsoleerde oplossingen niet mogelijk zijn. XDR kan worden verpakt en geleverd als een tool of suite van tools die organisaties inzetten, beheren en gebruiken. \autocite{SophosXDR2025} 
+    
+    Binnen deze XDR-oplossing biedt Sophos verschillende tools die het beheer van de Sophos eenvoudiger maken en het uitvoeren van bepaalde taken efficiënter maken. Een van deze tools is AI Case Summary. Deze tool genereert een overzichtelijke samenvatting van detections, waardoor security analisten sneller en beter onderbouwde beslissingen kunnen nemen.
+    
+    Voor een Sophos XDR oplossing betaal je per user. In dit geval is een user iemand die toegang heeft tot het XDR portaal. De prijs die je voor deze functie zal betalen hangt dus af van het aantal users op het portaal. Volgens \textcite{Kibalna2024} is de prijs per user, per jaar 42 euro.
+    
+    Naast de XDR zal Sophos ook  Zero-day bescherming aanbieden die wordt geleverd door SophosLabs Intelix, dit is een cloudservice die machine learning en sandboxing combineert om bekende en onbekende bedreigingen te detecteren door verdachte downloads en e-mailbijlagen te analyseren. Naast het blokkeren van risicovolle bestanden, biedt zero-day bescherming ook gedetailleerde rapporten van de uitgevoerde analyse om u te helpen het risico te begrijpen. \autocite{SophosZD2022} 
+    
+    Om gebruik te kunnen maken heeft de firewall een actieve Zero Day Protection bundel nodig, deze bundel kost ...   
+\end{itemize}
+
+Beide firewall vendors maken gebruik van AI gebaseerde threat detection.
+
+
+De AI tools die beide firewall vendors toerijken zijn zeer verschillende, aan de ene kant heb je de toepassing van PA die vooral gefocust is op het voorkomen van dreigingen doormiddel van AI. Zoals het detecteren van signatureless attacks. Sophos zal AI eerder gebruiken om bepaalde taken die analysten of beheerders moeten uitvoeren makkelijk te maken, hun focus ligt niet zo zeer op het gebruiken van AI om dreigingen te voorkomen.
+
+Omdat VPK gebruikt maakt van geavanceerdere SIEM en monitoring tools zoals Zabbix en Microsoft Sentinel is het minder belangerijk op het eenvoudig wijze zaken te gaan tonen in de Sophos interface. Voor VPK zal de focus dan eerder liggen op het voorkomen van dreigingen aan de hand van AI tools. Daarom zou de voorkeur binnen dit criteria uitgaan naar de Palo Alto firewall oplossing.
+
+
+
+
+
+\section{Sophos en Palo Alto licenties}
+Naast het aankopen van de effectieve firewall moet men ook steeds rekening houden met de kosten voor het aankopen van de geschikte licenses. Palo Alto en Sophos maken beiden gebruik van een model waarbij ze
+geavanceerde functionaliteiten samenvoegen in bundels die je dan nog apart dient aan te kopen. Zowel voor Sophos als voor Palo Alto moet je deze license jaarlijks vernieuwen.
+
+
+\subsection{Sophos Licenties}
+Bij Sophos XGS firewalls is de 'Base License' standaard en gratis inbegrepen. Deze license beschikt over een aantal essentiële basisfuncties, zonder dat een betaalde licentie nodig is. De licentie omvat onder andere een stateful firewall, die verkeer zal inspecteren en doorsturen. Een VPN-functionaliteit (zoals IPsec en SSL VPN) voor veilige externe toegang. Ook High Availability is inbegrepen, waarmee twee firewalls gekoppeld kunnen worden voor automatische failover bij een onverwachte storing.
+
+Echter bied Sophos nog een aantal andere extra licenses aan iedere license en de beschikbare functionaliteiten worden hieronder in detail besproken:
+
+\textbf{Network Protection}
+\begin{itemize}[label=\textbullet]
+    \item De network protection bundel van Sophos bevat een reeks netwerk gerelateerde beveiligingsfuncties. Zo bevat deze bundel onderandere een next geration IPS oplossing die data op applicatieniveau zal gaan blokeren. Ook zal er gebruikt kunnen worden gemaakt van de security heartbeat die een link creeren tussen de firewall en endpoints die verbonden zijn met Sophos Central, hierdoor zullen dreigingen sneller kunnen worden opgemerkt en kan de mogelijke impact beperkt blijven. Ook zal er een clientless HTML5 self-service portal beschikbaaar zijn waardoor gebruikers vooraf gedefinieerde bronnen remote zullen kunnen bereiken.
+\end{itemize}
+
+
+\textbf{Web Protection}
+\begin{itemize}[label=\textbullet]
+    \item De Web Protection bundel van Sophos zorgt voor uitgebreide controle over het internet en applicatiegebruik van de gebruikers binnen het netwerk. Er kunnen regels worden ingesteld per gebruiker of groep, zo kunnen bepaalde URL's worden geblokeerd op basis van zelfgekozen zoekwoorden. Met application control wordt inzicht verkregen in duizenden applicaties en kan worden bepaald wat wel of niet is toegestaan, hier kan er ook QoS worden ingesteld. Dankzij Synchronized Application Control worden onbekende applicaties automatisch herkend. De geoptimaliseerde SSL inspection zorgt ervoor dat ook geëncrypteerd verkeer gecontroleerd wordt, zonder de de snelheid hieronder lijd.
+\end{itemize}
+
+\textbf{Zero Day Protection}
+\begin{itemize}[label=\textbullet]
+    \item De Zero Day Protection bundel van Sophos biedt AI gebaseerde statische file analyse technieken aan die actief ransomware en andere onbekende dreigingen zullen neutraliseren. Een aantal verschillende functies die aanwezig zijn in deze bundel zijn: een cloud-based threat intelligence and threat analysis platform, dit platform zal aan de hand van deep learning gebaseerde analyse een 'Risk Summary' voor een file aanmaken. Ook is er statische file analyse inbegrepen, deze functie zal aan de hand van verschillende ML modellen dreigingen identificeren.
+\end{itemize}
+
+
+
+
+
 
 
 

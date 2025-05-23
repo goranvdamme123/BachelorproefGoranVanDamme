@@ -6,21 +6,17 @@
 
 \documentclass[a0,portrait]{hogent-poster}
 
-% Info over de opleiding
 \course{Bachelorproef}
 \studyprogramme{toegepaste informatica}
 \academicyear{2024-2025}
 \institution{Hogeschool Gent, Valentin Vaerwyckweg 1, 9000 Gent}
 
-% Info over de bachelorproef
 \title{Versterking van bedrijfsnetwerkbeveiliging met behulp van firewall toepassingen binnen VPK Packaging Group.}
 \author{Goran Van Damme}
 \email{goran.vandamme@student.hogent.be}
 \supervisor{Sofie Lambert}
 \cosupervisor{Jan Khan (VPK Packaging Group)}
 
-% Indien ingevuld, wordt deze informatie toegevoegd aan het einde van de
-% abstract. Zet in commentaar als je dit niet wilt.
 \specialisation{Systeem- en Netwerkbeheer}
 \keywords{Bedrijfsnetwerkbeveiliging, firewalltoepassingen, ICS-bescherming, cybersecurity, netwerksegmentatie, toegangscontrole, VPK Packaging Group, productiebedrijf }
 \projectrepo{https://github.com/goranvdamme123/BachelorproefGoranVanDamme}
@@ -37,7 +33,7 @@ De aanpak bestaat uit literatuuronderzoek, analyses van beide firewallopstelling
 Uit het onderzoek blijkt dat een overstap naar Palo Alto op termijn de beste optie is, dankzij betere beveiliging, beheerbaarheid en uniformiteit binnen het VPK-netwerk. Dit vraagt wel om een gefaseerde implementatie om productie-onderbrekingen te vermijden.
 \end{abstract}
 
-\begin{multicols}{2} % This is how many columns your poster will be broken into, a portrait poster is generally split into 2 columns
+\begin{multicols}{2}
 
 \section{Introductie}
 VPK Packaging Group is een producent van duurzame papier en karton verpakkingen. Ze zijn wereldwijd actief in meer dan 70 plants waar in totaal meer dan 7000 mensen te werk gesteld zijn. In 2021 heeft VPK Packaging Group een productiesite voor gerecycleerd papier en karton in Alizay overgenomen, gelegen in Normandië, ten westen van Parijs. Deze site maakt gebruik van een Sophos firewall ter bescherming van het OT netwerk tegen externe dreigingen. Op alle andere VPK-productiesites wordt echter een Palo Alto firewall gebruikt voor de beveiliging van het ICS. Het is dan ook logisch dat de vraag rijst of het behoud van de Sophos firewall op deze locatie effectief en haalbaar is, of dat een vervanging door een Palo Alto firewall die in lijn is met de rest van de VPK sites een betere optie is.
@@ -72,7 +68,7 @@ We kunnen concluderen dat hoewel beide keuzes mogelijk zijn, de analyse op lange
 \section{Toekomstig onderzoek}
 
 Deze studie legt een grote hoeveelheid relevante informatie bloot die als basis kan dienen voor verder onderzoek. Een van de zaken waarop verder moet worden ingegaan om een ultieme beslissing te nemen omtrent de keuze van een geschikte firewall is de verdere documentatie van het netwerk van de productiesite van Alizay. 
-Door in kaart te brengen welke apparaten actief zijn op het netwerk en welke sessies met andere systemen openstaan, wordt het configureren van firewallregels op deze firewall aanzienlijk vereenvoudigd. Daarnaast biedt dit ook de mogelijkheid om dieper in te gaan op de instellingen van de Sophos en Palo Alto firewalls die binnen deze bachelorproef nog niet aan bod zijn gekomen.
+Door in kaart te brengen welke apparaten actief zijn op het netwerk en welke sessies met andere systemen openstaan, wordt het configureren van firewallregels op deze firewall aanzienlijk vereenvoudigd. Daarnaast biedt dit ook de mogelijkheid om dieper in te gaan op de instellingen van de Sophos en Palo Alto firewalls die binnen deze bachelorproef nog niet aan bod zijn gekomen, maar wel een grote impact zullen hebben op de efficiëntie van de firewall in het effectief beveiligen van het netwerk.
 
  
 \end{multicols}
