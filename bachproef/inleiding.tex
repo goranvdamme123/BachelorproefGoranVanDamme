@@ -4,12 +4,17 @@
 
 \chapter{\IfLanguageName{dutch}{Inleiding}{Introduction}}%
 \label{ch:inleiding}
-
+\ref{sec:probleemstelling}
 \section{\IfLanguageName{dutch}{Probleemstelling}{Problem Statement}}%
 \label{sec:probleemstelling}
 
 Door de toenemende complexiteit en frequentie van cyberaanvallen is het steeds moeilijker en noodzakelijker voor bedrijven om zich te beschermen tegen deze dreigingen \autocite{saravanan2019}. Het is daarom uitermate belangrijk dat bepaalde organisaties zich hiertegen gaan wapenen met effectieve maatregelen op het vlak van cybersecurity. In dit onderzoek zal de focus liggen op het analyseren en evalueren van de huidige  firewalltoepassing binnen een bepaalde site van VPK en de impact op het beveiligen van het IT/OT netwerk van deze site.
-Volgens \textcite{pan2017} is cybersecurity een hoge prioriteit bij veel bedrijven, vooral door het groeiende aantal machines en systemen die op één of andere manier verbonden zijn met het internet om te communiceren met onder meer ERP-systemen.  Volgens \textcite{Lin2017} worden ICS'en op grote schaal gebruikt in verschillende kritieke infrastructuren van onder andere de olie-, water- en elektriciteitsindustrie. In het verleden beschikten de meeste van deze ICS'en niet over authentificatie- en versleutelingsmechanismen zoals firewalls of Vitual Private Networks (VPN) , waardoor ze kwetsbaar waren voor aanvallen door hackers. Dit is een zwak punt in het netwerk van een productiebedrijf dat gebruik maakt van een ICS. Zonder een performante firewall zijn deze systemen zeer kwetsbaar voor allerhande cyberbedreigingen, met name deze op de ICS. Daarom is de keuze voor een geschikte firewalltoepassing belangrijk voor het beschermen van bedrijfsnetwerken tegen mogelijke aanvallen van buitenaf die schade kunnen aanrichten aan de industriële infrastructuur van het bedrijf. Door deze aanvallen kan tevens de dienstverlening van het bedrijf op grote schaal verstoord worden. Volgens \textcite{Nwanya2017} zou het bedrijf aanzienlijk grote verliezen kunnen lijden door de stilstand van de productie. Het doel van dit onderzoek is dan ook om systeembeheerders en IT-professionals binnen VPK gerichtere informatie te geven over welke firewall-opstelling ze het best gebruiken binnen de productiesite. Deze informatie helpt hen bij het uitkiezen van de meest effectieve firewall, zodat zij de beveiliging van hun IT-infrastructuur kunnen waarborgen en de continue werking van de productie kunnen garanderen. Hierdoor kunnen de bevindingen van dit onderzoek direct worden toegepast in relevante cases binnen VPK.
+
+\vspace{5mm}
+Volgens \textcite{pan2017} is cybersecurity een hoge prioriteit bij veel bedrijven, vooral door het groeiende aantal machines en systemen die op één of andere manier verbonden zijn met het internet om te communiceren met onder meer ERP-systemen.  Volgens \textcite{Lin2017} worden ICS'en op grote schaal gebruikt in verschillende kritieke infrastructuren van onder andere de olie-, water- en elektriciteitsindustrie. In het verleden beschikten de meeste van deze ICS'en niet over authentificatie- en versleutelingsmechanismen zoals firewalls of Vitual Private Networks (VPN) , waardoor ze kwetsbaar waren voor aanvallen door hackers. Dit is een zwak punt in het netwerk van een productiebedrijf dat gebruik maakt van een ICS. Zonder een performante firewall zijn deze systemen zeer kwetsbaar voor allerhande cyberbedreigingen, met name deze op de ICS. Daarom is de keuze voor een geschikte firewalltoepassing belangrijk voor het beschermen van bedrijfsnetwerken tegen mogelijke aanvallen van buitenaf die schade kunnen aanrichten aan de industriële infrastructuur van het bedrijf. Door deze aanvallen kan tevens de dienstverlening van het bedrijf op grote schaal verstoord worden. 
+
+\vspace{5mm}
+Volgens \textcite{Nwanya2017} zou het bedrijf aanzienlijk grote verliezen kunnen lijden door de stilstand van de productie. Het doel van dit onderzoek is dan ook om systeembeheerders en IT-professionals binnen VPK gerichtere informatie te geven over welke firewall-opstelling ze het best gebruiken binnen de productiesite. Deze informatie helpt hen bij het uitkiezen van de meest effectieve firewall, zodat zij de beveiliging van hun IT-infrastructuur kunnen waarborgen en de continue werking van de productie kunnen garanderen. Hierdoor kunnen de bevindingen van dit onderzoek direct worden toegepast in relevante cases binnen VPK.
 
 \section{\IfLanguageName{dutch}{Onderzoeksvraag}{Research question}}%
 \label{sec:onderzoeksvraag}
@@ -18,17 +23,20 @@ Daarom zal dit onderzoek de uitdaging aankaarten die VPK heeft bij het kiezen va
 
 \begin{itemize}
     \item Welke zwaktes in de huidige IT/OT architectuur maken VPK kwetsbaar voor ICS-aanvallen?
-    \item ``\texttt{Welke soorten firewall systemen worden er momenteel gebruikt binnen VPK?}''
-    \item ``\texttt{Welke kosten en onderhoudsvereisten zijn verbonden aan de implementatie van een nieuwe firewall?}''
-    \item ``\texttt{Hoe kan de gekozen firewalltoepassing optimaal worden geïmplementeerd en geconfigureerd binnen de bestaande IT/OT-infrastructuur van VPK Packaging Group?}''
-    \item ``\texttt{Welke specifieke problemen zijn er met de huidige firewalls opstelling?}''
-    \item ``\texttt{Welke verschillende firewall settings kunnen worden aangepast om de beveiliging nog effectiever te maken.}``
+    \item Welke soorten firewall systemen worden er momenteel gebruikt binnen VPK?
+    \item Welke kosten en onderhoudsvereisten zijn verbonden aan de implementatie van een nieuwe firewall?
+    \item Hoe kan de gekozen firewalltoepassing optimaal worden geïmplementeerd en geconfigureerd binnen de bestaande IT/OT-infrastructuur van VPK Packaging Group?
+    \item Welke specifieke problemen zijn er met de huidige firewalls opstelling?
+    \item Welke verschillende firewall settings kunnen worden aangepast om de beveiliging nog effectiever te maken.
     \end{itemize}
 
 \section{\IfLanguageName{dutch}{Onderzoeksdoelstelling}{Research objective}}%
 \label{sec:onderzoeksdoelstelling}
 
-Dit onderzoek zal beperkt blijven tot het beveiligen van de ICS van het bedrijf. Mogelijks zullen door aanpassingen aan de infrastructuur voor de optimalisatie van de bescherming van de ICS ook andere delen van het netwerk beter beschermd zijn. Echter is dit niet het hoofddoel. Het doel van dit onderzoek is ook om betere inzichten te krijgen in de trend van de verschillende soorten firewalltoepassingen en de verschillende use cases in de praktijk. Dit doel zal bereikt worden door een uitgebreide literatuurstudie en het analyseren van deze casestudy binnen een specifiek productiebedrijf. En daarna deze kennis toe te passen om het ICS van het bedrijf beter te beschermen tegen aanvallen. Dit alles zal worden samengevat in een rapport waarin een groot aantal aanbevelingen staan voor leden van het cybersecurityteam binnen het productiebedrijf. Hierdoor zullen zij beter in staat zijn om hun infrastructuur te beschermen tegen ICS-cyberaanvallen van buitenaf. Ook zullen zij bedreigingen beter kunnen identificeren, en hierdoor veilige en effectieve firewalltoepassingen kunnen implementeren. Daardoor zal het doel van deze bachelorproef ook bereikt zijn en zal VPK beter beschermd zijn tegen de steeds gevaarlijkere en grootschaligere ICS-dreigingen. Dit zorgt ervoor dat de downtime van machines en de integriteit van data binnen het bedrijf steeds gewaarborgd blijven. Deze onderzoeksdoelstelling is specifiek, meetbaar, acceptabel, relevant en tijdsgebonden (SMART) en zal daardoor resulteren in een stevige set van aanbevelingen voor betere cybersecurity practices.
+Dit onderzoek zal beperkt blijven tot het beveiligen van de ICS van het bedrijf. Mogelijks zullen door aanpassingen aan de infrastructuur voor de optimalisatie van de bescherming van de ICS ook andere delen van het netwerk beter beschermd zijn. Echter is dit niet het hoofddoel. Het doel van dit onderzoek is ook om betere inzichten te krijgen in de trend van de verschillende soorten firewalltoepassingen en de verschillende use cases in de praktijk. 
+\vspace{5mm}
+
+Dit doel zal bereikt worden door een uitgebreide literatuurstudie en het analyseren van deze casestudy binnen VPK. En daarna deze kennis toe te passen om het ICS van VPK beter te beschermen tegen aanvallen. Dit alles zal worden samengevat in een rapport waarin een groot aantal aanbevelingen staan voor leden van het cybersecurityteam binnen het productiebedrijf. Hierdoor zullen zij beter in staat zijn om hun infrastructuur te beschermen tegen ICS-cyberaanvallen van buitenaf. Ook zullen zij bedreigingen beter kunnen identificeren, en hierdoor veilige en effectieve firewalltoepassingen kunnen implementeren. Daardoor zal het doel van deze bachelorproef ook bereikt zijn en zal VPK beter beschermd zijn tegen de steeds gevaarlijkere en grootschaligere ICS-dreigingen. Dit zorgt ervoor dat de downtime van machines en de integriteit van data binnen het bedrijf steeds gewaarborgd blijven. Deze onderzoeksdoelstelling is specifiek, meetbaar, acceptabel, relevant en tijdsgebonden (SMART) en zal daardoor resulteren in een stevige set van aanbevelingen voor betere cybersecurity practices.
 
 \section{\IfLanguageName{dutch}{Opzet van deze bachelorproef}{Structure of this bachelor thesis}}%
 \label{sec:opzet-bachelorproef}

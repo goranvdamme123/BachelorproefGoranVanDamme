@@ -6,12 +6,16 @@
 
 De eerste fase zal gewijd worden aan het analyseren van de concrete problemen die zich mogelijks kunnen voordoen bij het behouden van de originele firewall, dit kan gaan over technische en non-technische aspecten die mogelijks de dienstverlening binnen de productie kunnen verstoren en de financiële schade die VPK daar mogelijk zou kunnen door oplopen. Ook zal er worden gekeken hoe het implementeren van die nieuwe firewall toepassing dit probleem zouden kunnen beheren en voorkomen. Hiervoor zal er gebruik gemaakt worden van bedrijfsinterne knowledge bases, diverse papers en studies met betrekking tot netwerkbeveiliging. Zo zal er een beter inzicht te verkrijgen zijn over de mogelijke firewall opstellingen en welke strategieën er kunnen worden toegepast voor het beschermen van het ICS met behulp van firewalltoepassingen. Ook zal er worden gekeken naar andere aspecten die mogelijks spelen bij het maken van een doordachte keuze. Dit kan gaan over de ervaringen van het huidige netwerkteam met een bepaalde vendor. Maar mogelijks over de integratie met andere netwerkcomponenten en de mogelijkheid om de firewall centraal te beheren. De geschatte duurtijd van deze fase bedraagt drie dagen die verspreid zullen zijn over drie weken.
 
+\vspace{5mm}
 Tijdens de tweede fase zal er een interne bevraging zijn bij systeembeheerders en netwerkprofessionals op bedrijfsniveau. Hun jarenlange ervaring omtrent netwerkbeveiliging en het optimaliseren van talloze beveiligingsmaatregelen binnen VPK kan kostbare inzichten opleveren voor het achterhalen van de huidige netwerkopstelling van het bedrijf. Deze informatie zal gebruikt kunnen worden voor het configureren van de firewall zodanig dat deze optimaal geconfigureerd is in het netwerk. Zo kunnen we de schade die een aanval zou kunnen aanrichten zo minimaal mogelijk houden en zal de aanval de dienstverlening zo weinig mogelijk verstoren. Ook kan deze informatie nuttig zijn voor de evaluatie in de vijfde fase. De geschatte duurtijd van deze fase bedraagt drie dagen die verspreid zullen zijn over drie weken.
 
+\vspace{5mm}
 In de derde fase verwerken we de grote hoeveelheid verzamelde data om een helder overzicht te creëren. Dit maakt het makkelijker om te beslissen of we de huidige firewall opnieuw configureren of een volledig nieuwe implementeren. Deze keuze baseren we op verschillende analyses, zoals een SWOT en RASCI analyse. Hiermee brengen we niet alleen de technische voor- en nadelen in kaart, maar kijken we ook naar welke stakeholders welke taken op zich nemen na de implementatie. Op basis van deze inzichten stellen we een concreet plan op voor eventuele aanpassingen aan de firewall en het netwerk van de productiesite. De geschatte duurtijd van deze fase bedraagt twee dagen die verspreid zullen zijn over twee weken.
 
+\vspace{5mm}
 In het vierde deel zal er worden toegespitst op het perfectioneren van beveiligingstoepassingen. Hierbij zal er met behulp van het plan dat is opgesteld in de derde fase de huidige firewalltoepassing geherconfigureerd worden. Als er aan de hand van de verschillende analyses blijkt dat een andere firewall dan de huidige firewall een betere 'fit' zou kunnen zijn voor de eisen en noden van VPK, dan kan er worden gekozen om gebruik te maken van een compleet nieuwe firewall die ook betere bescherming zal bieden tegen aanvallen op het ICS. Ook zullen er aanpassingen kunnen worden aangebracht aan de rest van het netwerk die de firewall zou kunnen helpen bij het tegenhouden van aanvallen op het ICS. De geschatte duurtijd van deze fase bedraagt drie dagen die verspreid zullen zijn over drie weken.
 
+\vspace{5mm}
 De vijfde en tevens laatste fase zal bestaan uit het evalueren van de impact van de geherconfigureerde firewall en de voorgestelde aanpassingen aan het netwerk. Er zullen een reeks criteria worden opgesteld waaraan voldaan moet zijn. Deze criteria zullen er voor zorgen dat we duidelijk kunnen aantonen dat mogelijke wijzigingen die we hebben aangebracht het makkelijker maken voor de systeembeheerders om ook de firewall te beheren en ze ook een duidelijker inzicht krijgen van welke zaken er juist gebeuren aan de interne kant van de firewall. Daarnaast zal worden beschreven welke specifieke maatregelen het beste kunnen worden genomen om het netwerk en de firewall van het productiebedrijf beter te beschermen tegen aanvallen op het ICS. De geschatte duur van deze fase bedraagt twee dagen, verdeeld over twee weken.  
 
 \chapter{Analyse van het FR16 netwerk}
@@ -21,16 +25,26 @@ De vijfde en tevens laatste fase zal bestaan uit het evalueren van de impact van
 \section{Analyse van de huidige opstelling}
 
 De eerste fase van dit onderzoek richt zich voornamelijk op het verzamelen van relevante informatie die nodig is voor een weloverwogen keuze van de toekomstige firewallopstelling. Bij de implementatie van IT- of OT-toepassingen binnen een productiesite moet met een groot aantal factoren rekening worden gehouden. De hoogste prioriteit van elke productiesite blijft de continuïteit van de productie. Omdat de implementatie van een nieuwe netwerktopologie verschillende risico’s met zich meebrengt, is het cruciaal om alle mogelijke problemen en scenario’s zorgvuldig in kaart te brengen. Dit voorkomt verstoringen in het productieproces en waarborgt de continuiteit van de productie.
-Een verstoring van de IT-dienstverlening binnen een productiesite heeft niet alleen impact op de IT-apparaten van gebruikers, maar ook op de OT toepassingen, zoals PLC’s, sensoren en SCADA-systemen. Deze systemen spelen een belangerijke rol in het aansturen en monitoren van industriële processen. Wanneer de IT infrastructuur faalt, kunnen deze OT systemen niet meer correct functioneren, dit heeft directe gevolgen voor de productieomgeving. Daarnaast is de werking van machines binnen een productiesite sterk afhankelijk van onderlinge communicatie tussen hen. Ze zijn geprogrammeerd om in een nauwkeurige volgorde en met optimale efficiëntie te opereren, zodat de productie soepel verloopt en de supply chain niet wordt onderbroken. Als de verbinding tussen deze machines wegvalt, ontstaan er onvoorziene stilstanden en inefficiënties die de productie ernstig kunnen vertragen of zelfs volledig stilleggen. Dit heeft niet alleen gevolgen voor de interne werking van de productiesite, maar ook voor externe partners en leveranciers. Transportbedrijven, logistieke dienstverleners en andere samenwerkingspartners ervaren hinder wanneer de supply chain verstoord raakt. De expeditieafdeling, die afhankelijk is van verschillende softwaretools en netwerksystemen zoals SAP voor het plannen en coördineren van leveringen, kan haar taken niet efficiënt uitvoeren zonder een stabiele IT omgeving. Dit leidt tot vertragingen in verzendingen, problemen met voorraadbeheer en mogelijk zelfs financiële verliezen door stilstand en gemiste levertermijnen.
+Een verstoring van de IT-dienstverlening binnen een productiesite heeft niet alleen impact op de IT-apparaten van gebruikers, maar ook op de OT toepassingen, zoals PLC’s, sensoren en SCADA-systemen. Deze systemen spelen een belangerijke rol in het aansturen en monitoren van industriële processen. Wanneer de IT infrastructuur faalt, kunnen deze OT systemen niet meer correct functioneren, dit heeft directe gevolgen voor de productieomgeving. 
 
+\vspace{5mm}
+Daarnaast is de werking van machines binnen een productiesite sterk afhankelijk van onderlinge communicatie tussen hen. Ze zijn geprogrammeerd om in een nauwkeurige volgorde en met optimale efficiëntie te opereren, zodat de productie soepel verloopt en de supply chain niet wordt onderbroken. Als de verbinding tussen deze machines wegvalt, ontstaan er onvoorziene stilstanden en inefficiënties die de productie ernstig kunnen vertragen of zelfs volledig stilleggen. Dit heeft niet alleen gevolgen voor de interne werking van de productiesite, maar ook voor externe partners en leveranciers. Transportbedrijven, logistieke dienstverleners en andere samenwerkingspartners ervaren hinder wanneer de supply chain verstoord raakt. De expeditieafdeling, die afhankelijk is van verschillende softwaretools en netwerksystemen zoals SAP voor het plannen en coördineren van leveringen, kan haar taken niet efficiënt uitvoeren zonder een stabiele IT omgeving. Dit leidt tot vertragingen in verzendingen, problemen met voorraadbeheer en mogelijk zelfs financiële verliezen door stilstand en gemiste levertermijnen.
+
+
+\vspace{5mm}
 In 2021 heeft VPK de productiesite van Alizay overgenomen van papierproducent Double A. Met deze overname kreeg VPK niet alleen de productiefaciliteit in handen, maar ook het volledige IT en OT netwerk dat op deze site in gebruik was. Aangezien Double A gebruikmaakte van andere leveranciers voor netwerkapparatuur en eigen best practices hanteerde voor netwerkbeheer, verschilt de opzet van dit netwerk aanzienlijk van de standaard IT/OT-infrastructuur die VPK binnen alle andere productiesites gebruikt.
 Het overgenomen netwerk heeft diverse problemen met de stabiliteit, veiligheid en efficiëntie die de IT en OT systemen in gevaar brengen. Compatibiliteitsproblemen tussen de originele infrastructuur van Alizay en de standaarden van VPK maken het lastig om systemen correct te integreren met elkaar.
 
 \subsection{Kadering rond de huidige netwerkopstelling van FR16}
 Aangezien VPK Group de productiesite in Alizay pas in 2021 heeft overgenomen, blijven er tot op heden regelmatig onbekende elementen aan het licht komen. Een van die elementen was de aanwezigheid van een tot dan toe niet gedocumenteerd OT netwerk, inclusief een firewall die specifiek binnen dat netwerk werd gebruikt. Een essentieel onderdeel van deze studie bestond dan ook uit het analyseren en in kaart brengen van dit OT netwerk. Door deze inventarisatie heeft VPK waardevol inzicht verkregen in de aanwezige apparaten en datastromen. Op basis van deze informatie kan nu een weloverwogen beslissing worden genomen over hoe het netwerk het best kan worden aangepast om te voldoen aan de standaarden en vereisten die VPK hanteert op al haar andere productiesites.
 
+\vspace{5mm}
 In het kader van deze analyse zijn verschillende documenten opgesteld die belangrijke informatie aanduiden en een duidelijker overzicht bieden van de structuur en opbouw van het OT-netwerk van FR16.
 
+\vspace{5mm}
+Een van deze documenten is een uitgebreide Excel-lijst waarin alle gebruikte switches en routers binnen het netwerk gedetailleerd zijn beschreven. Voor elk apparaat zijn specifieke kenmerken en relevante technische gegevens opgenomen, zoals weergegeven in tabel \ref{fig:UCMASTER}. Dit voorbeeld uit de Excel-lijst toont de belangrijkste eigenschappen van het apparaat met de naam SwMapUcMaster, waaronder het gebruikersaccount, IP- en MAC-adres, locatie, fabrikant, type, firmwareversie en configuratie van VLAN’s. Ook wordt informatie weergegeven over de fysieke poortconfiguratie en aanwezige SFP-modules. Dit overzicht biedt een duidelijk inzicht in de componenten van het OT netwerk en vormt een essentieel onderdeel van de technische documentatie.
+
+\vspace{5mm}
 \begin{table}[h!]
     \centering
     \resizebox{0.6\textwidth}{!}{%
@@ -55,77 +69,104 @@ In het kader van deze analyse zijn verschillende documenten opgesteld die belang
         \end{tabular}%
     }
     \caption{Overzicht van het apparaat SW\_MAP\_UC\_MASTER binnen het OT-netwerk.}
+    \label{fig:UCMASTER}
 \end{table}
 
-
+In Figuur \ref{fig:FR16_before} is een high level netwerkoverzicht van de OT-infrastructuur van FR16 weergegeven. Deze afbeelding biedt een schematische weergave van de netwerktopologie en toont de onderlinge verbindingen tussen de belangrijkste netwerkcomponenten, zoals switches, routers en overige netwerkapparatuur. Dit diagram is ontworpen om op een visueel duidelijke manier inzicht te geven in de huidige staat van de netwerkarchitectuur.
 
 \begin{figure}[H]
     \centering
     \fbox{%
         \includegraphics[width=0.8\textwidth]{fotos/FR16_before.png}%
     }
-    \caption[high-level overzicht]{\label{fig:grail}Een high-level overzicht van het netwerk werd opgesteld om snel en duidelijk inzicht te geven in de huidige staat van de infrastructuur.}
+    \caption[high-level overzicht]{\label{fig:FR16_before}Een high-level overzicht van het netwerk werd opgesteld om snel en duidelijk inzicht te geven in de huidige staat van de infrastructuur.}
 \end{figure}
 
 
 \subsection{Problemen met huidige OT Firewall opstelling}
-Om te beginnen is het OT-netwerk van deze site beveiligd met een firewall van het merk Sophos. Dit vormt een uitdaging, aangezien VPK standaard gebruikmaakt van Palo Alto firewalls voor de beveiliging van alle andere productiesites die ze beheren. Palo Alto biedt een centrale webinterface, genaamd Strata Cloud Manager(SCM), waarmee alle geïmplementeerde firewalls binnen het netwerk op één platform kunnen worden beheerd.
+Om te beginnen is het OT-netwerk van deze site beveiligd met een firewall van het merk Sophos zoals te zien is in figuur \ref{fig:SophosFirewall}. Dit vormt een uitdaging, aangezien VPK standaard gebruikmaakt van Palo Alto firewalls voor de beveiliging van alle andere productiesites die ze beheren. Palo Alto biedt een centrale webinterface, genaamd Strata Cloud Manager(SCM), waarmee alle geïmplementeerde firewalls binnen het netwerk op één platform kunnen worden beheerd.
 
+\vspace{5mm}
 Omdat Sophos firewalls niet compatibel zijn met SCM, moeten ze afzonderlijk worden beheerd via een eigen online portaal. Dit leidt tot een versnipperde beheersomgeving, waarin netwerkbeheerders meerdere systemen moeten gebruiken om de verschillende firewalls te beheren. Hierdoor neemt de complexiteit toe en wordt het lastiger om een uniforme beveiligingsstrategie te hanteren.
 
+\vspace{5mm}
 Een bijkomend voordeel van Strata Cloud Manager is dat het niet alleen een centraal overzicht biedt van alle Palo Alto firewalls, maar ook de mogelijkheid geeft om firewallregels op één plek te beheren en automatisch uit te rollen naar specifieke firewalls binnen het netwerk. Dit maakt het eenvoudiger om wijzigingen consistent door te voeren en minimaliseert de kans op fouten bij handmatige configuraties.
 Daarnaast kan het gebruik van verschillende firewallmerken leiden tot inconsistente security policies, verhoogde operationele lasten en een grotere kans op menselijke fouten bij configuraties en monitoring. Om een efficiënter en gestroomlijnder netwerkbeheer te realiseren, zou het migreren van de Sophos firewall naar een andere firewalloplossing, zoals Palo Alto, een logische volgende stap zijn.
 
-Daarnaast heeft niemand binnen het huidige netwerkteam van VPK ervaring met het implementeren en configureren van Sophos firewalls. Hoewel dit op dit moment geen direct probleem vormt voor de huidige firewallopstelling, is het wel een belangrijke factor om in overweging te nemen. Op langere termijn kan het gebrek aan expertise leiden tot verschillende uitdagingen, zoals een incorrecte configuratie van de firewalls door onvoldoende kennis van de specifieke implementatie- en beheersprincipes van Sophos.
+\vspace{5mm}
+Daarnaast heeft niemand binnen het huidige netwerkteam van VPK uitgebreide ervaring met het implementeren en configureren van Sophos firewalls. Hoewel dit op dit moment geen direct probleem vormt voor de huidige firewallopstelling, is het wel een belangrijke factor om in overweging te nemen. Op langere termijn kan het gebrek aan expertise leiden tot verschillende uitdagingen, zoals een incorrecte configuratie van de firewalls door onvoldoende kennis van de specifieke implementatie- en beheersprincipes van Sophos.
 
+\vspace{5mm}
 Een verkeerde configuratie kan resulteren in beveiligingsrisico’s, verminderde netwerkprestaties of zelfs netwerkstoringen. Om deze risico’s te beperken, kan er overwogen worden om over te stappen op een firewalloplossing die beter aansluit bij de bestaande kennis en beheertools binnen VPK zoals een firewall van Palo Alto.\newline
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{fotos/SophosFirewall.jpg}
-    \caption[Sophos Firewall]{\label{fig:grail}De huidige Sophos firewall die gebruikt wordt op de FR16 site van VPK.}
+    \caption[Sophos Firewall]{\label{fig:SophosFirewall}De huidige Sophos firewall die gebruikt wordt op de FR16 site van VPK.}
 \end{figure} 
 
 \subsection{Problemen met het huidige OT netwerk}
-Een van de grootste uitdagingen binnen het netwerk van de productiesite van Alizay is het gebrek aan documentatie over de bestaande infrastructuur. Het netwerkteam dat verantwoordelijk was voor het onderhoud van het IT- en OT-netwerk voor de overname door VPK heeft geen gedetailleerde documentatie bijgehouden over de netwerkarchitectuur. Dit maakt het beheer van het netwerk moeilijker, omdat er onvoldoende inforimatie beschikbaar is over de werking en samenstelling ervan. Zonder deze kennis wordt het uitdagend om aanpassingen door te voeren, storingen snel op te lossen en beveiligingsrisico’s effectief te beheersen.
+Een van de grootste uitdagingen binnen het netwerk van de productiesite van Alizay is het gebrek aan documentatie over de bestaande infrastructuur. Het netwerkteam dat verantwoordelijk was voor het onderhoud van het IT en OT netwerk voor de overname door VPK heeft geen gedetailleerde documentatie bijgehouden over de netwerkarchitectuur. Dit maakt het beheer van het netwerk moeilijker, omdat er onvoldoende inforimatie beschikbaar is over de werking en samenstelling ervan. Zonder deze kennis wordt het uitdagend om aanpassingen door te voeren, storingen snel op te lossen en beveiligingsrisico’s effectief te beheersen.
+
+\vspace{5mm}
 Het OT-netwerk binnen de site van Alizay bestaat uit meerdere generaties componenten die in de loop van tientallen jaren zijn geïmplementeerd. Hierdoor is het netwerk geleidelijk uitgebreid met verschillende subnetwerken die doorheen de jaren zijn toegevoegd, vaak zonder een plan of duidelijke standaardisatie. Dit heeft geleid tot een complexe en gefragmenteerde infrastructuur, waarbij verschillende systemen en protocollen naast elkaar bestaan.
+
+\vspace{5mm}
 Deze gelaagde netwerkstructuur kan verschillende uitdagingen veroorzaken wanneer wordt besloten de huidige firewallregels te herzien of te optimaliseren. Op dit moment zijn er geen specifieke firewallregels die expliciet bepalen welke data uit de verschillende subnetwerken mag worden doorgelaten of geblokkeerd. Dit betekent dat het netwerk mogelijk meer verkeer toestaat dan strikt noodzakelijk is, wat een potentieel beveiligingsrisico vormt. Tegelijkertijd zorgt het ontbreken van een duidelijke segmentatie van het netwerk ervoor dat ongewenste blokkades kunnen optreden wanneer nieuwe firewallregels worden ingevoerd.
+
+\vspace{5mm}
 De combinatie van een verouderde netwerkinfrastructuur en het gebrek aan een goed gedefinieerd firewallbeleid kan het risico met zich mee brengen dat bepaalde subnetwerken of systemen onverwacht worden geblokkeerd bij herconfiguratie van de firewall. Dit kan ertoe leiden dat machines tijdelijk uitvallen, wat een negatieve impact heeft op de productieprocessen en de volledige supply chain. In sommige gevallen kan zelfs een kleine onderbreking in de netwerkcommunicatie ervoor zorgen dat een machine niet meer correct functioneert, waardoor productiestilstand ontstaat en de continuiteit van de productie niet gewaarborgd kan worden.
 
-Binnen de verschillende productiesites van VPK wordt gebruikgemaakt van machines afkomstig van diverse externe leveranciers. Deze geavanceerde machines bevatten vaak een combinatie van verschillende technische componenten, zoals PLC’s, sensoren, pneumatische systemen, robotarmen en geautomatiseerde transportsystemen zoals die van Minda. 
+\vspace{5mm}
+Binnen de verschillende productiesites van VPK wordt gebruikgemaakt van machines afkomstig van diverse externe leveranciers. Deze geavanceerde machines bevatten vaak een combinatie van verschillende technische componenten, zoals PLC’s, sensoren, pneumatische systemen, robotarmen en geautomatiseerde transportsystemen zoals te zien is in figuur \ref{fig:MindaConveyorFotoBP} . 
 
+\vspace{5mm}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{fotos/MindaConveyorFotoBP.jpg}
-    \caption[Minda Conveyor]{\label{fig:grail} Een Minda conveyor installatie die pallets met kartonnen dozen verplaatst. ©Talina Scholz}
+    \caption[Minda Conveyor]{\label{fig:MindaConveyorFotoBP} Een Minda conveyor installatie die pallets met kartonnen dozen verplaatst. ©Talina Scholz}
 \end{figure} 
+\vspace{5mm}
 
 Deze componenten zijn onderling afhankelijk en wisselen continu data uit om productieprocessen op elkaar af te stemmen. Om deze gegevensuitwisseling mogelijk te maken moet er een betrouwbaar netwerk aanwezig zijn die alle verschillende componenten met elkaar verbindt.
+
+\vspace{5mm}
 In de praktijk betekent dit dat fabrikanten van deze machines vaak genoodzaakt zijn om hun eigen kleine netwerken op te zetten binnen de productiesite. Dit gebeurt met behulp van netwerkcomponenten zoals switches en routers, zodat hun machines correct kunnen functioneren. Wanneer een productiesite veel verschillende machines van uiteenlopende fabrikanten bevat, ontstaat al snel een situatie waarbij een groot aantal afzonderlijke private netwerken naast elkaar bestaat. Omdat deze netwerken zelden op elkaar worden afgestemd of gestandaardiseerd, leidt dit tot een uiterst gefragmenteerde netwerkstructuur. Hierdoor wordt het uniform beheren van de netwerken op verschillende VPK-sites vrijwel onmogelijk, aangezien elke site een unieke combinatie van leveranciers, machines en netwerktopologieën bevat.
-Daarnaast vereisen veel fabrikanten een externe verbinding met hun machines om op afstand onderhoud te kunnen uitvoeren, real-time monitoring mogelijk te maken of software-updates te installeren. Dit betekent dat er op de productiesite van Alizay op twee mogelijke manieren een connectie met het internet kan worden gerealiseerd. De eerste optie is dat de fabrikant gebruikmaakt van het bestaande bekabelde netwerk van de site, dat wordt beheerd door VPK. In dit geval moet er bij de configuratie van de firewallregels rekening mee worden gehouden dat dit verkeer niet per ongeluk wordt geblokkeerd, anders verliest de fabrikant de mogelijkheid om zijn machines op afstand te beheren.
+
+\vspace{5mm}
+Daarnaast vereisen veel fabrikanten een externe verbinding met hun machines om op afstand onderhoud te kunnen uitvoeren, real-time monitoring mogelijk te maken of software-updates te installeren. Dit betekent dat er op de productiesite van Alizay op twee mogelijke manieren een connectie met het internet kan worden gerealiseerd. 
+
+\vspace{5mm}
+De eerste optie is dat de fabrikant gebruikmaakt van het bestaande bekabelde netwerk van de site, dat wordt beheerd door VPK. In dit geval moet er bij de configuratie van de firewallregels rekening mee worden gehouden dat dit verkeer niet per ongeluk wordt geblokkeerd, anders verliest de fabrikant de mogelijkheid om zijn machines op afstand te beheren.
+
+\vspace{5mm}
 De tweede optie is dat de fabrikant een 4G-router met een eigen SIM-kaart gebruikt, zodat er geen directe verbinding met het netwerk van VPK nodig is. Hoewel dit in sommige gevallen een veiliger alternatief lijkt, introduceert het ook uitdagingen op het gebied van toezicht en controle over externe verbindingen. Soms kan het ook zijn dat een externe fabrikant gebruik maakt van een 4G-router en een fysieke verbinding met het VPK netwerk. In feite zal de fabrikant hierdoor de firewall gaan omzeilen. Dit is een uiterst kwetsbaar fenomeen dat veel schade kan berokken aan het VPK netwerk. Omdat in feite de firewall omzeild zal worden.
-Beide methoden brengen aanzienlijke beveiligingsrisico’s met zich mee. Veel van de private netwerken die door machinefabrikanten worden opgezet, voldoen niet aan de meest recente cybersecuritystandaarden. Dit betekent dat ze kwetsbaar kunnen zijn voor aanvallen van buitenaf. Indien een hacker erin slaagt toegang te krijgen tot zo’n slecht beveiligd netwerk, kan dit een potentiële ingang vormen naar het bredere IT- en OT-netwerk van de productiesite. Dit zou ernstige gevolgen kunnen hebben, zoals productieonderbrekingen, verlies van kritieke data en zelfs de manipulatie van industriële processen.
+
+\vspace{5mm}
+De tweede methode brengt aanzienlijke beveiligingsrisico’s met zich mee. Veel van de private netwerken die door machinefabrikanten worden opgezet, voldoen niet aan de meest recente cybersecuritystandaarden. Dit betekent dat ze kwetsbaar kunnen zijn voor aanvallen van buitenaf. Indien een hacker erin slaagt toegang te krijgen tot zo’n slecht beveiligd netwerk, kan dit een potentiële ingang vormen naar het bredere IT- en OT-netwerk van de productiesite. Dit zou ernstige gevolgen kunnen hebben, zoals productieonderbrekingen, verlies van kritieke data en zelfs de manipulatie van industriële processen.
 \vspace{5mm} 
 
-Naast de analyses die op afstand zijn uitgevoerd, heeft er ook een fysiek bezoek aan FR16 plaatsgevonden. Dit bezoek was noodzakelijk omdat het niet mogelijk was om het volledige fysieke netwerk van FR16 volledig in kaart te brengen via remote methoden. Tijdens het op afstand in kaart brengen van het netwerk stuitte men op enkele uitdagingen. Een van deze uitdagingen was het gebruik van unmanaged switches binnen het OT netwerk. Deze switches maken het ontdekken en beheren van een netwerk zeer moeilijk, omdat deze switches niet beheerbaar zijn en geen inzicht geven in welke apparaten op de poorten zijn aangesloten. Op een poort van een unmanaged switch zijn enkel MAC-adressen zichtbaar van de aangesloten apparaten, zonder verdere context of identificatie van de aangesloten apparaten. Bovendien is het niet mogelijk om in te loggen op de switch voor configuratie of monitoring, wat het traceren, beheren en analyseren van netwerkverbindingen aanzienlijk lastiger maakt.
+Naast de analyses die op afstand zijn uitgevoerd, heeft er ook een fysiek bezoek aan FR16 plaatsgevonden. Dit bezoek was noodzakelijk omdat het niet mogelijk was om het volledige fysieke netwerk van FR16 volledig in kaart te brengen via remote methoden. Tijdens het op afstand in kaart brengen van het netwerk stuitte men op enkele uitdagingen. Een van deze uitdagingen was het gebruik van unmanaged switches binnen het OT netwerk. 
 
+\vspace{5mm}
+Deze switches maken het ontdekken en beheren van een netwerk zeer moeilijk, omdat deze switches niet beheerbaar zijn en geen inzicht geven in welke apparaten op de poorten zijn aangesloten. Op een poort van een unmanaged switch zijn enkel MAC-adressen zichtbaar van de aangesloten apparaten, zonder verdere context of identificatie van de aangesloten apparaten. Bovendien is het niet mogelijk om in te loggen op de switch voor configuratie of monitoring, wat het traceren, beheren en analyseren van netwerkverbindingen aanzienlijk lastiger maakt.
 
+\vspace{5mm}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{fotos/hirschmannSwitch.jpg}
-    \caption[Hirschmann switch]{\label{fig:grail} Een unmanaged Hirschmann switch die wordt gebruikt binnen het OT netwerk van de FR16 site van VPK.}
+    \caption[Hirschmann switch]{\label{fig:hirschmannSwitch} Een unmanaged Hirschmann switch die wordt gebruikt binnen het OT netwerk van de FR16 site van VPK.}
 \end{figure}
-
+\vspace{5mm}
 
 \section{Analyse van de gewenste opstelling}
-Binnen de huidige opstelling functioneren het OT en IT netwerk als twee afzonderlijke systemen die los van elkaar opereren. Deze scheiding is echter niet de meest efficiënte oplossing. Een betere benadering zou zijn om beide netwerken binnen één geïntegreerde infrastructuur onder te brengen, beheerd via een centrale firewall. Hierdoor kunnen het OT en IT netwerk effectief van elkaar worden gescheiden door gebruik te maken van verschillende VLAN’s. Dit is een mmethode die bekend staat als netwerksegmentatie. In onderdeel ONDERDEELNUMMER wordt hier dieper op ingegaan.
+Binnen de huidige opstelling functioneren het OT en IT netwerk als twee afzonderlijke systemen die los van elkaar opereren. Deze scheiding is echter niet de meest efficiënte oplossing. Een betere benadering zou zijn om beide netwerken binnen één geïntegreerde infrastructuur onder te brengen zoals te zien is op figuur \ref{fig:FR16_after.png}, beheerd via een centrale firewall. Hierdoor kunnen het OT en IT netwerk effectief van elkaar worden gescheiden door gebruik te maken van verschillende VLAN’s. Dit is een mmethode die bekend staat als netwerksegmentatie. In onderdeel ONDERDEELNUMMER wordt hier dieper op ingegaan.
 
 \begin{figure}[H]
     \centering
     \fbox{%
-        \includegraphics[width=0.8\textwidth]{fotos/FR16_after.png}%
-    }
-    \caption[high-level overzicht]{\label{fig:grail}Een high-level overzicht van hoe het gewenste OT/IT netwerk er zou uitzien mocht er gekozen worden om een Palo Alto firewall te implementeren.}
+        \includegraphics[width=0.8\textwidth]{fotos/FR16_after.png}}
+    \caption[high-level overzicht]{\label{fig:FR16_after.png}Een high-level overzicht van hoe het gewenste OT/IT netwerk er zou uitzien mocht er gekozen worden om een Palo Alto firewall te implementeren.}
 \end{figure}
 
 
@@ -138,8 +179,6 @@ In dit deel zal er een SWOT analyse worden opgesteld op basis van de huidige sit
 \item \textbf{Extra laag bescherming:} Er is al een Palo Alto (PA) firewall aanwezig, wat betekent dat de Sophos firewall een extra laag van bescherming biedt. Dit is positief omdat het netwerk al enige beveiliging heeft, en de extra firewall kan helpen om de beveiliging verder te versterken.
 
 \item \textbf{De setup werkt, ook al is hij niet optimaal:} De huidige netwerkconfiguratie werkt wel, ook al is hij niet perfect. Dit betekent dat er geen grote storingen of onderbrekingen zijn, maar er is nog ruimte voor verbetering.
-
-
 \end{itemize}
 
 \subsection{Weaknesses}
@@ -176,12 +215,11 @@ In dit deel zal er een SWOT analyse worden opgesteld op basis van de gewenste si
 
 \subsection{Strengths}
 \begin{itemize}
-    \item \textbf{Toegang enkel mogelijk via een goed beveiligde Palo Alto firewall.} Aangezien het gewenste netwerk slechts één, goed beveiligde Palo Alto firewall bevat is de algemene netwerkbeveiliging versterkt. De zwakke schakel, de eerder gebruikte Sophos firewall, is daarmee verwijderd uit het netwerk waardoor het risico op ongeautoriseerde toegang aanzienlijk is verminderd.
+\item \textbf{Toegang enkel mogelijk via een goed beveiligde Palo Alto firewall.} Aangezien het gewenste netwerk slechts één, goed beveiligde Palo Alto firewall bevat is de algemene netwerkbeveiliging versterkt. De zwakke schakel, de eerder gebruikte Sophos firewall, is daarmee verwijderd uit het netwerk waardoor het risico op ongeautoriseerde toegang aanzienlijk is verminderd.
     
-    \item \textbf{Het netwerk is uniform aan andere VPK sites} De gewenste netwerkopstelling sluit aan bij de configuraties die ook op andere VPK sites worden gebruikt. Dit zorgt voor meer uniformiteit, waardoor wijzigingen efficiënter kunnen worden doorgevoerd en troubleshooting eenvoudiger en met minder kans op fouten verloopt.
+\item \textbf{Het netwerk is uniform aan andere VPK sites} De gewenste netwerkopstelling sluit aan bij de configuraties die ook op andere VPK sites worden gebruikt. Dit zorgt voor meer uniformiteit, waardoor wijzigingen efficiënter kunnen worden doorgevoerd en troubleshooting eenvoudiger en met minder kans op fouten verloopt.
 
-    \item \textbf{De EoL netwerapparaten zijn vervangen.} De meeste netwerkapparaten in dit netwerk hebben hun EoL datum ruim overschreden. Deze zullen daarom worden vervangen door nieuwere, ondersteunde modellen om de betrouwbaarheid en veiligheid van het netwerk te waarborgen.
-    
+\item \textbf{De EoL netwerapparaten zijn vervangen.} De meeste netwerkapparaten in dit netwerk hebben hun EoL datum ruim overschreden. Deze zullen daarom worden vervangen door nieuwere, ondersteunde modellen om de betrouwbaarheid en veiligheid van het netwerk te waarborgen.
 \end{itemize}
 
 \subsection{Weaknesses}
@@ -228,7 +266,8 @@ De verschillende letters van RASCI staan voor een bepaald woord dat een bepaalde
 \end{itemize}
 
 \subsection{Opbouw van de RASCI Matrix.}
-Volgens \textcite{Cabanillas2011} is een RASCI-matrix is opgebouwd uit twee assen: op de horizontale as worden de verschillende rollen binnen het project weergegeven, terwijl de verticale as de diverse taken toont. In elk vakje van de matrix wordt met een enkele letter aangeduid welke rol welke verantwoordelijkheid opneemt voor een bepaalde taak. Zo staat bijvoorbeeld de letter 'R' voor "Responsible. Wanneer bijvoorbeeld de letter 'R' in een bepaald vakje voorkomt, betekent dit dat de overeenkomstige rol op de horizontale as Responsable is voor de taak op de verticale as. \autocite{Cabanillas2011}
+Volgens \textcite{Cabanillas2011} is een RASCI-matrix is opgebouwd uit twee assen: op de horizontale as worden de verschillende rollen binnen het project weergegeven, terwijl de verticale as de diverse taken toont. In elk vakje van de matrix wordt met een enkele letter aangeduid welke rol welke verantwoordelijkheid opneemt voor een bepaalde taak. 
+Zo staat bijvoorbeeld de letter 'R' voor "Responsible. Wanneer bijvoorbeeld de letter 'R' in een bepaald vakje voorkomt, betekent dit dat de overeenkomstige rol op de horizontale as Responsable is voor de taak op de verticale as. \autocite{Cabanillas2011}
 
 \subsection{Verschillende taken binnen deze RASCI matrix}
 
@@ -268,20 +307,20 @@ Volgens \textcite{Cabanillas2011} is een RASCI-matrix is opgebouwd uit twee asse
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{fotos/Rasci_AS-IS.png}
-    \caption[Foto Rasci AS-IS]{\label{fig:grail}Rasci tabel van de huidige toestand in FR16.}
+    \caption[Foto Rasci AS-IS]{\label{fig:Rasci_AS-IS}Rasci tabel van de huidige toestand in FR16.}
 \end{figure} 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{fotos/Rasci_TO-BE.png}
-    \caption[Foto Rasci TO-BE]{\label{fig:grail}Rasci tabel voor de toekomstige opstelling in FR16.}
+    \caption[Foto Rasci TO-BE]{\label{fig:Rasci_TO-BE}Rasci tabel voor de toekomstige opstelling in FR16.}
 \end{figure} 
 
 
 \subsection{Doel van de nieuwe RASCI tabel}
-In de huidige (AS-IS) RASCI-tabel is het OT-team van FR16 verantwoordelijk voor alle taken. Omdat dit team vaak onvoldoende kennis heeft van IT systemen, leidt dit regelmatig tot wanbeheer van IT apparatuur binnen de OT omgeving. \newline
-Daarom is ervoor gekozen om de verantwoordelijkheden opnieuw te verdelen. Elke stakeholder binnen het netwerk zal voortaan taken uitvoeren die aansluiten bij zijn of haar expertise. Deze nieuwe verdeling zal leiden tot een efficiëntere werking van het OT en IT netwerk binnen FR16.
+In de huidige (AS-IS) RASCI-tabel \ref{fig:Rasci_AS-IS} is het OT-team van FR16 verantwoordelijk voor alle taken. Omdat dit team vaak onvoldoende kennis heeft van IT systemen, leidt dit regelmatig tot wanbeheer van IT apparatuur binnen de OT omgeving. Daarom is ervoor gekozen om de verantwoordelijkheden opnieuw te verdelen, zoals aangegeven in de TO-BO RASCI tabel \ref{fig:Rasci_TO-BE}. Elke stakeholder binnen het netwerk zal voortaan taken uitvoeren die aansluiten bij zijn of haar expertise. Deze nieuwe verdeling zal leiden tot een efficiëntere werking van het OT en IT netwerk binnen FR16.
 
+\vspace{5mm}
 Daarnaast zal er ook een verschuiving zijn van de accountability richting het IT team van VPK Group. Dit brengt verschillende voordelen met zich mee:
 
 \begin{itemize}
@@ -298,6 +337,7 @@ Daarnaast zal er ook een verschuiving zijn van de accountability richting het IT
 \section{RFP als leidraad voor doordachte keuzes.}
 Sinds 2015 maakte VPK gebruik van stateful firewalls zonder NGFW functionaliteiten. Om de overstap te maken naar next generation firewalls (NGFW), diende VPK een Request for Proposal (RFP) in bij zowel Telenet als Proximus. In deze RFP werden diverse criteria opgenomen waaraan een toekomstige NGFW moest voldoen om in aanmerking te komen voor implementatie op alle VPK sites.
 
+\vspace{5mm}
 De destijds opgestelde RFP blijft vandaag de dag nog steeds relevant en kan nog steeds dienen als basis voor een doordachte keuze bij het maken van een eventuele overstap naar een andere NGFW. In deze studie zullen daarom verschillende criteria uit die oorspronkelijke RFP worden gebruikt om de functionaliteiten van de huidige Sophos en Palo Alto firewalls met elkaar te vergelijken.
 
 
@@ -306,6 +346,7 @@ De destijds opgestelde RFP blijft vandaag de dag nog steeds relevant en kan nog 
 \section{Vergelijking van verschillende firewall functionaliteiten}
 In dit onderzoek maken we gebruik van twee verschillende firewalls om een vergelijking te kunnen maken. Voor Palo Alto gebruiken we de PA-440, aangezien dit type firewall het meest is geïmplementeerd op de meeste VPK productiesites. Voor Sophos gebruiken we de XGS 136, omdat deze firewall momenteel actief is binnen het OT-netwerk van de FR16-site.
 
+\vspace{5mm}
 In de RFP die VPK in 2015 heeft opgesteld, worden meer dan 150 criteria voorgesteld. Deze studie is echter niet uitgebreid genoeg om alle criteria waaraan NGFW’s moeten voldoen grondig te vergelijken. Daarom hebben verschillende IT professionals binnen VPK een lijst opgesteld met de belangrijkste criteria waaraan een moderne firewall moet voldoen. Beide firewalls zullen worden vergeleken aan de hand van de lijst met vooropgestelde criteria.
 
 
@@ -336,6 +377,7 @@ Binnen deze criteria zullen de twee firewalls worden vergeleken op basis van hun
 
 Binnen deze criteria worden de twee firewalls vergeleken op hun mogelijkheden tot traffic classification en traffic filtering. Hierbij analyseert de firewall het binnenkomende en uitgaande netwerkverkeer en deelt dit in op basis van verschillende kenmerken zoals: gebruikte poorten, protocollen, applicaties en bestemmingen. Op basis van deze indeling kan het verkeer vervolgens worden gefilterd. Zo kan de firewall specifieke websites of applicaties blokkeren, bijvoorbeeld sociale media, streamingsdiensten, goksites enzovoort afhankelijk van het beleid dat wordt ingesteld op de firewall.
 
+\vspace{5mm}
 Ook is het mogelijk om met deze indeling Quality of Service (QoS) in te stellen, zodat belangrijk verkeer zoals videobellen of kritieke bedrijfsapplicaties voorrang krijgt boven minder belangrijk verkeer. Zo wordt er voor gezorgd dat het netwerk efficiënter werkt met de beschikbare bandbreedte, en dat belangrijke diensten altijd soepel blijven draaien.
 
 \textbf{Palo Alto}
@@ -379,7 +421,7 @@ Binnen deze criteria worden de twee firewalls vergeleken op hun mogelijkheden to
 
 \subsubsection{Vergelijken van de IEEE 801.1AX en IEEE 802.3ad standaarden}
 
-    In de onderstaande tabel worden enkele vergelijkingen gemaakt tussen de twee standaarden die worden gebruikt op de Sophos XGS 136 en Palo Alto PA-440 voor het implementeren van LACP.
+    In de onderstaande tabel \ref{tab:LACP_TABLE} worden enkele vergelijkingen gemaakt tussen de twee standaarden die worden gebruikt op de Sophos XGS 136 en Palo Alto PA-440 voor het implementeren van LACP.
     \begin{table}[h!]
         \centering
         \resizebox{\textwidth}{!}{%
@@ -403,16 +445,20 @@ Binnen deze criteria worden de twee firewalls vergeleken op hun mogelijkheden to
             \end{tabular}%
         }
         \caption{Vergelijking tussen IEEE 802.3ad en IEEE 802.1AX voor het gebruik van LACP.}
+        \label{tab:LACP_TABLE}
     \end{table}
 
 \subsection{Product should support Dual/Hot Swappable Power Supplies}
 
 Binnen deze criteria worden de twee firewalls vergeleken op basis van hun stroomvoorzieningsmogelijkheden. Beide modellen maken gebruik van een externe power adapter: de 230 Volt wisselstroom uit het stopcontact wordt via deze externe power supply omgezet naar de benodigde gelijkstroom voor de firewall. Dit betekent dat er in beide gevallen één of meerdere externe power supplies nodig zijn, wat uitdagingen kan opleveren bij een nette en efficiënte plaatsing in een netwerk-rack.
 
+\vspace{5mm}
 Beide firewall vendors bieden echter accessoires aan die dit installatieproces vergemakkelijken. Zo beschikken ze elk over eigen rack mounting kits, die afzonderlijk verkrijgbaar zijn. Deze kits bieden ruimte om één of twee externe power supplies stevig te monteren in het rack.
 
+\vspace{5mm}
 Een belangrijk voordeel is dat beide firewalls ondersteuning bieden voor het gebruik van twee power supplies. Dit maakt redundante stroomvoorziening mogelijk, wat de continue werking van de firewall zal garanderen indien er een technische probleem is met de externe voeding en er geen gebruik wordt gemaakt van HA binnen het netwerk.
 
+\vspace{5mm}
 Tot slot zijn er nog enkele kleinere verschillen in de stroomvoorziening en de bijhorende accessoires. Deze worden in de twee onderstaande punten verder besproken.
 
 \textbf{Palo Alto}
@@ -461,20 +507,24 @@ Tot slot zijn er nog enkele kleinere verschillen in de stroomvoorziening en de b
 \subsection{Product should provide zero downtime software upgrades as configured in the HA environment}
 Binnen deze criteria streeft VPK ernaar om de continuïteit van de productie te waarborgen tijdens het uitvoeren van firmware updates op de firewalls. Dit is om twee redenen van groot belang.
 Enerzijds wil VPK garanderen dat de firewalls altijd voorzien zijn van de meest recente en ondersteunde firmwareversies. Regelmatige updates verminderen het risico op cyberaanvallen die misbruik maken van kwetsbaarheden in oudere firmware.
+
+\vspace{5mm}
 Anderzijds is het cruciaal dat de productieprocessen op de site ononderbroken blijven. Omdat vrijwel alle machines afhankelijk zijn van externe netwerkverbindingen, bijvoorbeeld voor communicatie met SAP-servers is een constante en veilige verbinding met de servers die buiten het netwerk liggen essentieel.
 
+\vspace{5mm}
 Om deze beschikbaarheid te garanderen, is het noodzakelijk dat de twee firewalls, die in een High Availability configuratie zijn opgesteld, zodanig worden geüpgraded dat altijd minstens één firewall actief blijft. Zo kan het netwerkverkeer tijdens de update veilig blijven verlopen, zonder impact op de productie.
 
 \textbf{Sophos}
 \begin{itemize}[label=\textbullet]
     \item Sophos biedt een snelle en eenvoudige manier aan om een HA firewall pair te upgraden zonder dat er downtime is. In HA zullen deze apparaten opereren als een enkele entiteit. Waarbij één van de apparaten zich zal voordoen als primaire firewall en de andere als back-up firewall. Omdat deze apparaten werken in een cluster is het aantal stappen dat moet worden genomen om deze apparaten te updaten eerder beperkt. De gebruiker zal zal op de GUI van de primaire sophos firewall slechts twee knoppen moeten indrukken om het upgrade process te starten. Eerst zal de user op de download knop moeten drukken om de nieuwe firmware te downloaden vanop het internet. Daarna zal de user op de install knop moeten drukken om de firmware effectief te installeren. De verdere processen die moeten worden uitgevoerd om de firewalls te upgraden gebeurt volledig automatisch op de achtergrond. Het process dat zich op de achtergrond plaatsvind verloopt als volgt:
     
-    
-    
+\vspace{5mm}
     Sophos biedt een snelle en eenvoudige manier om een HA-firewallpair te upgraden zonder enige vorm van downtime. In een HA configuratie functioneren beide apparaten als één geheel, waarbij één toestel optreedt als de primaire firewall en het andere als de back-up, dit noemt men een cluster. Doordat deze apparaten in een cluster werken, is het aantal benodigde stappen die door de gebruiker moeten worden uitgevoerd om een upgrade uit te voeren beperkt.
-    
+
+\vspace{5mm}    
     De gebruiker hoeft op de GUI van de primaire Sophos firewall slechts twee knoppen te gebruiken om het upgradeproces te starten. Eerst wordt op de download knop geklikt om de nieuwste firmware van het internet te downloaden. Vervolgens wordt met een druk op de install knop de installatie van de firmware gestart.
-    
+
+\vspace{5mm}    
     De verdere stappen van het upgradeproces verlopen volledig automatisch op de achtergrond. Dit proces bestaat uit de volgende fasen:
     
     \begin{enumerate}
@@ -489,19 +539,22 @@ Om deze beschikbaarheid te garanderen, is het noodzakelijk dat de twee firewalls
 \textbf{Palo Alto}
 \begin{itemize}[label=\textbullet]
     \item Hoewel het upgraden van een Sophos HA-firewallpair via een eenvoudige methode verloopt die geen diepgaande kennis van High Availability vereist, is dit bij Palo Alto niet het geval. Palo Alto biedt namelijk geen mogelijkheid om firmware-upgrades automatisch uit te voeren via een automatische failover. Bij het upgraden van een Palo Alto-firewallpair moet op elk apparaat afzonderlijk de firmware handmatig worden gedownload en geïnstalleerd. Daarnaast moet de failover tussen de twee firewalls handmatig worden uitgevoerd. Deze manuele aanpak maakt het upgradeproces aanzienlijk complexer en tijdrovender in vergelijking met Sophos. 
-    
+ 
+    \vspace{5mm}   
     Toch is het uitvoeren van firmware upgrades een cruciale taak om de beveiliging van het netwerk up-to-date te houden. Indien de persoon die de upgrade uitvoert niet volledig op de hoogte is van de specifieke stappen en aandachtspunten bij een HA upgrade binnen Palo Alto, kunnen er snel fouten ontstaan. Zulke fouten kunnen leiden tot onverwachte downtime van de productieomgeving, met potentieel ernstige financiële gevolgen. Om dit risico te minimaliseren, zal er een PoC worden opgesteld. Deze PoC dient niet alleen om het upgradeproces vooraf te testen, maar zal ook fungeren als een gedetailleerde handleiding voor het veilig en gecontroleerd upgraden van een Palo Alto HA firewall pair binnen een productieomgeving.
 \end{itemize}
 
 \subsection{The product must support a minimum of 5 Million concurrent connections}
 Deze eis specificeert dat de firewall minimaal 5 miljoen gelijktijdige sessies moet kunnen ondersteunen. Dit is van cruciaal belang om te waarborgen dat de netwerkcapaciteit ook tijdens pieken voldoende is. VPK wil hiermee voorkomen dat het aantal actieve sessies ooit een bottleneck vormt voor de netwerkprestaties of de beschikbaarheid van kritieke bedrijfsapplicaties. Dit criterium draagt dan ook direct bij aan de betrouwbaarheid en schaalbaarheid van de infrastructuur.
 
+\vspace{5mm}
 Het maximum aantal gelijktijdige sessies op de Palo Alto PA-440 firewall is: 200.000 \newline
 Het maximum aantal gelijktijdige sessies op de Sophos XGS 136 firewall is: 6.400.000
 
 \subsection{The product must support a minimum of 120.000 new connections per second processing.}
 Deze vereiste stelt dat het systeem in staat moet zijn om minimaal 120.000 nieuwe sessies per seconde te verwerken. Dit is van belang om te garanderen dat de firewall adequaat kan omgaan met plotselinge pieken in netwerkverkeer, zoals tijdens geautomatiseerde processen of het opstarten van systemen. Deze specificatie is vooral belangrijk in dynamische omgevingen waar connectiviteit met externe servers die zich niet on-prem begeven te communiceren.
 
+\vspace{5mm}
 Het maximale nieuwe sessies per seconde van de Palo Alto PA-440 firewall is: 37.000 \newline
 Het maximale nieuwe sessies per seconde van de Sophos XGS 136 firewall is: 74.500
 
@@ -548,6 +601,7 @@ geavanceerde functionaliteiten samenvoegen in bundels die je dan nog apart dient
 \subsection{Sophos Licenties}
 Bij Sophos XGS firewalls is de 'Base License' standaard en gratis inbegrepen. Deze license beschikt over een aantal essentiële basisfuncties, zonder dat een betaalde licentie nodig is. De licentie omvat onder andere een stateful firewall, die verkeer zal inspecteren en doorsturen. Een VPN-functionaliteit (zoals IPsec en SSL VPN) voor veilige externe toegang. Ook High Availability is inbegrepen, waarmee twee firewalls gekoppeld kunnen worden voor automatische failover bij een onverwachte storing.
 
+\vspace{5mm}
 Echter bied Sophos nog een aantal andere extra licenses aan iedere license en de beschikbare functionaliteiten worden hieronder in detail besproken:
 
 \textbf{Network Protection}
@@ -595,11 +649,17 @@ VPK beschikt momenteel niet over de mogelijkheid om IPS functionaliteiten centra
 
 
 \textbf{DNS Protection bundel}
-De DNS Protection bundel voegt verschillende DNS gerelateerde beveiligingsfuncties toe aan de Sophos firewall. Binnen VPK wordt echter al gebruikgemaakt van een eigen DNS server waarop specifieke regels zijn toegepast. Hierdoor lijkt het overbodig om te investeren in een licentie die functionaliteiten biedt die VPK reeds centraal en voor alle sites heeft opgezet. Deze bundel zou daarentegen wel een waardevolle optie zijn in situaties waarin VPK geen eigen DNS server zou gebruiken. Bovendien biedt de Sophos oplossing aanvullende mogelijkheden die momenteel niet aanwezig zijn in de bestaande infrastructuur, zoals AI-gestuurde functies voor het in real-time blokkeren van kwaadaardige domeinen.
+De DNS Protection bundel voegt verschillende DNS gerelateerde beveiligingsfuncties toe aan de Sophos firewall. Binnen VPK wordt echter al gebruikgemaakt van een eigen DNS server waarop specifieke regels zijn toegepast. Hierdoor lijkt het overbodig om te investeren in een licentie die functionaliteiten biedt die VPK reeds centraal en voor alle sites heeft opgezet. 
+
+\vspace{5mm}
+Deze bundel zou daarentegen wel een waardevolle optie zijn in situaties waarin VPK geen eigen DNS server zou gebruiken. Bovendien biedt de Sophos oplossing aanvullende mogelijkheden die momenteel niet aanwezig zijn in de bestaande infrastructuur, zoals AI-gestuurde functies voor het in real-time blokkeren van kwaadaardige domeinen.
 
 
 \textbf{Central Orchestration bundel}
-VPK is aangesloten op het Proximus-netwerk en bevindt zich momenteel in de overgang van een MPLS omgeving naar een SD-WAN oplossing. De functies die deze licentie biedt, richten zich voornamelijk op het verbinden van verschillende vestigingen via VPN-technologie. Aangezien VPK al beschikt over een centrale netwerkarchitectuur die deze functionaliteiten afdekt, is het aanschaffen van deze licentie voor de Sophos-firewall in dit geval niet aanbevolen. De toegevoegde waarde zou beperkt zijn binnen de bestaande infrastructuur. Maar mocht VPK nog geen MPLS en SD-WAN omgeving hebben bij Proximus dan zou deze licentie wel zeer waardevol kunnen zijn omdat je op een eenvoudige manier zonder gebruikt te moeten maken van andere fysieke hardware of services centraal je volledige netwerkstructuur zou kunnen beheren.
+VPK is aangesloten op het Proximus-netwerk en bevindt zich momenteel in de overgang van een MPLS omgeving naar een SD-WAN oplossing. De functies die deze licentie biedt, richten zich voornamelijk op het verbinden van verschillende vestigingen via VPN-technologie. Aangezien VPK al beschikt over een centrale netwerkarchitectuur die deze functionaliteiten afdekt, is het aanschaffen van deze licentie voor de Sophos-firewall in dit geval niet aanbevolen. De toegevoegde waarde zou beperkt zijn binnen de bestaande infrastructuur. 
+
+\vspace{5mm}
+Echter mocht VPK nog geen MPLS en SD-WAN omgeving hebben bij Proximus dan zou deze licentie wel zeer waardevol kunnen zijn omdat je op een eenvoudige manier zonder gebruikt te moeten maken van andere fysieke hardware of services centraal je volledige netwerkstructuur zou kunnen beheren.
 
 
 \textbf{Email Protection bundel}
@@ -617,10 +677,13 @@ WIP ik weet niet wat VPK voor web protection gebruikt.
 
 Op basis van de verzamelde info en de huidige problemen op de productiesite van Alizay, lijkt het logisch om te kiezen voor één soort firewall die goed past bij de bestaande infrastructuur en kennis binnen VPK. Een overstap naar een Palo Alto firewall heeft op dat vlak verschillende voordelen.
 
+\vspace{5mm}
 Met deze oplossing kan het beheer van alle firewalls binnen VPK op één plek gebeuren. Dat maakt het dagelijkse werk minder ingewikkeld. Ook gebruiken andere VPK-sites al Palo Alto, wat zorgt voor meer eenheid. Zo kan er beter gebruik gemaakt worden van bestaande kennis, werkwijzen en tools. Dit zorgt voor een veiligere en efficiëntere werking van zowel IT- als OT-netwerken. Tegelijk verkleint het de kans op fouten of verkeerde instellingen.
 
+\vspace{5mm}
 Doordat Palo Alto al op meerdere plaatsen binnen VPK gebruikt wordt, kan het netwerkteam sneller reageren bij problemen of aanpassingen doen zonder hulp van buitenaf nodig te hebben. Aangezien het huidige OT-netwerk vrij complex is, is het ook belangrijk dat de firewall goede ondersteuning biedt voor het opdelen van het netwerk, het opvolgen van verkeer en het beheren van wie toegang heeft tot wat.
 
+\vspace{5mm}
 Daarom lijkt het logisch om de Sophos firewall te verwijderen uit het netwerk, en enkel gebruik te maken van een Palo Alto firewall pair.
 
 \newpage
@@ -629,10 +692,14 @@ Daarom lijkt het logisch om de Sophos firewall te verwijderen uit het netwerk, e
 
 \subsection{Logs via Palo Alto}
 De Palo Alto firewalls die zich op andere locaties bevinden, verzamelen loggegevens van netwerkverkeer en systeemactiviteiten. Deze logs worden automatisch doorgestuurd naar een centrale server waarop Microsoft Sentinel draait. Microsoft Sentinel is een cloudgebaseerde SIEM-oplossing van Microsoft. SIEM staat voor Security Information and Event Management.
+
+\vspace{5mm}
 Een SIEM systeem verzameld loggegevens uit verschillende bronnen, zoals firewalls, servers, toepassingen en andere netwerkapparaten. Die gegevens worden vervolgens geanalyseerd. Als er iets gebeurt dat afwijkt van het normale gedrag, kan Sentinel dit detecteren in realtime. Het systeem kan daarna automatisch meldingen sturen of zelfs actie ondernemen, zoals het blokkeren van een IP-adres of het starten van een onderzoek. Zo helpt Sentinel bij het vroegtijdig opsporen van cyberdreigingen en bij het verbeteren van de beveiliging van het netwerk.
 
 
 Naast Microsoft Sentinel worden de verzamelde loggegevens ook doorgestuurd naar de Zabbix monitoringserver. Zabbix is een open-source monitoringtool die gebruikt wordt om IT-infrastructuur te bewaken. Dit omvat onder andere fysieke servers, virtuele machines, netwerksystemen en cloudtoepassingen.
+
+\vspace{5mm}
 Zabbix verzamelt allerlei metrics zoals CPU-belasting, geheugengebruik, schijfruimte, netwerkactiviteit, enzovoort. Deze informatie wordt weergegeven in een overzichtelijk dashboard dat je via een webinterface kan bekijken. Zo kan er in één oogopslag gezien worden of er problemen zijn met een bepaald systeem of apparaat.
 Zabbix maakt het ook mogelijk om alerts te versturen wanneer bepaalde drempels worden overschreden, bijvoorbeeld als de CPU belasting te hoog is of als een server niet meer reageert. Op die manier kunnen problemen snel worden gedetecteerd en opgelost, voordat ze ernstige gevolgen hebben.
 
@@ -646,124 +713,12 @@ Zabbix maakt het ook mogelijk om alerts te versturen wanneer bepaalde drempels w
 \subsection{Logs via Sophos}
 Tot voor kort werden er op de Sophos firewall geen loggegevens verzameld. Hierdoor was er weinig zicht op wat er zich precies afspeelde binnen het netwerkverkeer dat via deze firewall liep. Als onderdeel van mijn bachelorproef heb ik ervoor gezorgd dat de firewall nu wel logs verzamelt en dat deze op een correcte en veilige manier worden doorgestuurd naar de nodige servers die de data analyseren en verwerken.
 De loggegevens worden via het syslog-protocol doorgestuurd naar twee verschillende servers: enerzijds de Zabbix monitoringserver en anderzijds de Microsoft Sentinel server. Deze syslog-berichten bevatten nuttige informatie, zoals de actuele firewallregels, de heartbeat van het systeem en verschillende systeemgebeurtenissen.
+
+\vspace{5mm}
 Omdat er op het FR16-netwerk tot nu toe nauwelijks of geen monitoring aanwezig was, is deze wijziging van groot belang. Dankzij deze aanpassing kunnen problemen sneller worden opgemerkt. In het geval van downtime of een mogelijke cyberdreiging kan er sneller worden ingegrepen, wat uiteindelijk helpt om schade of downtime te beperken.
 
 
 
-\section{Beste High Availability settings voor de Palo Alto firewalls van FR16.}
-
-
-High Availability (HA) is een functie die verschillende netwerk apparatuur vendors aanbieden, deze functie zorgt ervoor dat de downtime geminimaliseerd wordt door het gebruiken van meerdere entiteiten van dezelfde appartuur. Vaak zal er gebruik worden gemaakt van twee apparaten die dan op verschillende mogelijke manieren geconfigureerd kunnen worden. Twee populaire manieren om deze apparaten te configurenen zijn Active/Active of Active/Passive. De termen Active en Passive slaan hier op de staat van het apparaat. Active betekend dat dit apparaat wel degelijk bepaalde netwerk functies op zich zal nemen en dus actief zal meerwerken om bepaalde data te verwerken. Passive betekend dat het apparaat niet actief data zal verwerken, en zich dus in een soort van rust stand bevindt.
-
-\subsection{Active/Active firewall opstelling}
-Bij een Active/Active opstelling verwerken beide apparaten actief data. In dit geval zullen beide firewalls gelijktijdig verkeer filteren op basis van vooraf gedefinieerde firewallregels. Hoewel dit in sommige situaties voordelen kan bieden, is deze opstelling in onze omgeving minder geschikt om meerdere redenen.
-\newline
-
-
-
-\begin{itemize}
-    \item \textbf{Active/Active firewall pairs zijn complex om te installeren en onderhouden:}  Sessie synchronisatie tussen de firewalls kan complex worden, zeker als er gebruik wordt gemaakt van dynamische IP’s binnen het netwerk. Omdat er is besloten in bovenstaande rasci matrix dat het beheer van de OT firewall een verantwoorddelijkheid is van het OT team lijkt het niet verstandig om gebruik te maken van een complexe firewall opstelling omdat de kennis over het beheer van dit soort opstellingen minder groot is bij het OT team. 
-    
-    \item \textbf{Kans op asymmetrische sessies:} De kans is groter dat beide firewalls onafhankelijk data forwarden, waardoor inbound verkeer via een ander pad kan terugkeren dan outbound verkeer. Dit kan leiden tot session mismatches, met als gevolg dat data mogelijk wordt gedropt.
-    
-    \item \textbf{Inconsistentie met andere sites:}  Alle andere VPK-sites met een Palo Alto firewall-pair gebruiken een Active/Passive-opstelling. Een Active/Active-configuratie binnen FR16 zou de uniformiteit van de netwerkarchitectuur verstoren.
-
-\end{itemize}
-
-\newpage
-
-Ook is binnen deze Active/Active opstelling de mogelijkheid om gebruik te maken van parallel processing. Dit zorgt er effectief voor dat throughput verdubbeld wordt. \autocite{Fulp2006} Voor onze use case is dit echter niet relevant. De hoeveelheid data die via de Sophos firewall wordt verstuurd, is zo laag dat één Palo Alto firewall ruim voldoende capaciteit heeft om deze load zonder merkbare vertraging te verwerken. Uit een uitgebreide analyse van het netwerkverkeer op de WAN poort van de Sophos firewall, uitgevoerd over meerdere weken en op verschillende tijdstippen, blijkt dat de maximale gemeten throughput slechts 10 KBps bedroeg.
-
-
-De nieuwe Palo Alto firewall (PA-440) zou een maximale throughput van 2,6 Gbps hebben en ondersteunt 200.000 gelijktijdige sessies. \autocite{PaloAltoDS2025} Dit betekent dat de beschikbare capaciteit ruimschoots volstaat en dat een Active/Active configuratie geen toegevoegde waarde biedt voor deze specifieke productiesite.
-
-\begin{figure}[H]
-    \centering
-    \fbox{\includegraphics[scale=0.41]{fotos/SophosBandWidth.jpg}}
-    \caption[Sophos firewall bandwidth graph]{\label{fig:grail}Totale bandbreedte die gebruikt wordt door de Sophos OT firewall van de productiesite van FR16}
-\end{figure}
-
-
-
-
-\subsection{Active/Passive firewall opstelling}
-
-In een Active/Passive-opstelling is er slechts één firewall die gelijktijdig data verwerkt. Dit wordt mogelijk gemaakt door het configureren van HA-links. Deze links zijn cruciaal voor het waarborgen van redundantie, hoge prestaties en synchronisatie tussen firewalls in een HA-pair. Ze stellen de firewalls in staat om met elkaar te communiceren en statusinformatie te delen. Hierdoor kan de passieve firewall moeiteloos de taak van de actieve firewall overnemen bij een eventuele uitval. Zo zorgt de actieve firewall ervoor dat sessie-informatie wordt gedeeld met de passieve firewall, zodat deze altijd over de benodigde sessiegegevens beschikt in het geval van een failover. \autocite{PaloAltoHA2025} \autocite{PaloAltoHAb2025}
-
-Verder in dit hoofdstuk zal een HA verbinding tussen twee firewalls worden geconfigureerd op basis van de behoeften van VPK en de algemene best practices.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{fotos/PA_FirewallPairBE02.jpg}
-    \caption[Palo Alto Active/Passive pair]{\label{fig:grail}Een Palo Alto Active/Passive firewall opstelling in de VPK site van Erembodegem.}
-\end{figure} 
-
-
-
-\section{Beste High Availability settings voor de Sophos firewall van FR16}
-
-Om gebruik te kunnen maken van de HA-functies van de Sophos firewall is het noodzakelijk om twee identieke firewalls aan te schaffen. Momenteel is er echter slechts één firewall aanwezig, waardoor VPK genoodzaakt zal zijn om een tweede Sophos firewall aan te kopen om HA te kunnen implementeren. Dit proces is echter niet eenvoudig, aangezien het onduidelijk is hoe de huidige Sophos firewall is geconfigureerd. Als de twee firewalls in het HA-paar verschillende instellingen hebben, kan dit in de toekomst mogelijk problemen veroorzaken. Daarom moet er een tweede identieke firewall worden aangeschaft, en is het essentieel om een onderzoek te doen naar de huidige configuratie van de Sophos firewall.
-
-
-
-
-
-
-\section{Configuratie van HA op een Palo Alto Firewall}
-
-\textbf{Mode}
-    \begin{itemize}[label=\textbullet]
-        \item Zoals eerder in dit hoofdstuk besproken is zal er bij de configuratie van een Palo Alto firewall pair binnen een VPK site gebruik worden gemaakt van een Active/Passive opstelling. Hierbij zal er steeds slechts één firewall tegelijk actief zijn.
-    \end{itemize}
-
-
-
-\textbf{Enable Config Sync}
-    \begin{itemize}[label=\textbullet]
-        \item Configuration synchronization is een setting binnen Palo Alto HA firewall pairs. Waarbij een groot aantal settings automatisch worden gesyncroniseerd tussen devices. Om conflicten in configuraties te vermijden is het steeds aangeraden om configuraties steeds op de Active firewall uit te voeren en te wachten tot de Passive firewall gesynced is. Een aantal settings die niet worden gesynchroniseerd zijn: content updates, HA settings, mgmt interface settings, \ldots 
-    \end{itemize}
-
-
-
-\textbf{Passive Link state}
-    \begin{itemize}[label=\textbullet]
-        \item Deze settings zal bepalen in welke status alle data interfaces van een Passive firewall zullen worden geplaatst. Bij het gebruiken van de `shutdown` modus zullen alle data interfaces op de passive firewall in een `down` state worden geplaatst. Naast deze modus is er ook de `auto` modus. Bij deze modus zal alle data interfaces op `up` laten staan, maar dropped alle packets die over deze interfaces zouden passeren. Echter zou dit er voor kunnen zorgen dat switches nog steeds data packets zouden versturen over deze schijnbare `up` interfaces. Dit probleem samen met de algemene beste hardening cybersecurity practices om alle poorten die niet gebruikt worden op `down` te zetten zorgt ervoor dat VPK gebruik zal maken van de `shutdown` modus op beide firewalls.
-    \end{itemize}
-
-
-
-\textbf{Monitor fail hold down time}
-    \begin{itemize}[label=\textbullet]
-        \item De ``monitor fail hold down time'' is een vooraf ingestelde timer om onnodige failover te voorkomen. Nadat één van de links down gaat zal het process geen nieuwe failover toestaan als het ziet dat er binnen de tijdslimiet van één minuut de interface terug `up` is. Mocht de link toch langer dan één minuut down zijn zal er toch een failover gebeuren. Binnen iedere andere firewall op een VPK site wordt deze zelfde timer gebruikt. Daarom is er in het belang van uniformiteit gekozen om ook op deze site de timer in te stellen op één minuut.
-    \end{itemize}
-
-
-
-\textbf{Device Priority}
-    \begin{itemize}[label=\textbullet]
-        \item Deze settings zal bepalen welke prioriteit een bepaalde firewall heeft binnen een HA firewall pair. Een hogere waarde betekent direct ook een hogere prioriteit. Echter is dit enkel nuttig als men gebruik maakt van preemption. Maar aangezien preemption uit staat op deze firewalls zal deze priority waarde dus geen nut hebben.
-    \end{itemize}
-
-
-
-\textbf{Preemptive}
-    \begin{itemize}[label=\textbullet]
-        \item Deze setting zal er voor zorgen dat de firewall met een hogere prioriteit in staat is om terug Active te worden nadat er een failover is gebeurd. Echter heeft VPK gekozen om deze setting niet in te schakelen bij alle firewalls op alle VPK sites.
-    \end{itemize}
-
-
-
-\textbf{Hearbeat backup}
-    \begin{itemize}[label=\textbullet]
-        \item Deze optie zorgt ervoor dat er een backup is om de hearbeat berichten van de apparaten op te sturen via de management interfaces van de firewall. Deze berichten zullen standaard over de HA1 en HA2 link worden verstuurd. Aangezien er twee rechtstreekse linken zijn tussen de twee firewalls in het HA pair is het dus niet meer nodig om deze optie aan te zetten.
-    \end{itemize}
-
-
-\begin{figure}[H]
-    \centering
-    \fbox{\includegraphics[scale=0.666]{fotos/PA_HASettings.jpg}}
-    \caption[PA High Availability settings]{\label{fig:grail}GUI (Graphical User Interface) interface om de settings om de configuratie van High Availability op een PA firewall aan te passen.}
-\end{figure}
 
 
 
@@ -783,10 +738,13 @@ Om gebruik te kunnen maken van de HA-functies van de Sophos firewall is het nood
 
 Netwerksegmentatie met VLAN’s (Virtual Local Area Networks) is nog steeds een erg goede manier om verschillende delen van een netwerk virtueel van elkaar te scheiden. Daarom lijkt het een slim idee om deze techniek ook toe te passen op het VPK-netwerk.
 
+\vspace{5mm}
 Concreet kan ervoor gekozen worden om de apparaten die binnen het IT/OT netwerk actief zijn onder te verdelen in verschillende groepen. Zo worden deze groepen van elkaar afgescheiden en is communicatie tussen hen standaard niet meer mogelijk. Uiteraard kunnen we nog steeds toestaan dat bepaalde groepen met elkaar praten via firewallregels op de Palo Alto firewall.
 
+\vspace{5mm}
 Het belangrijkste doel hiervan is simpel: als een aanvaller erin slaagt om toegang te krijgen tot één apparaat, dan krijgt hij niet meteen toegang tot het volledige netwerk, maar blijft hij beperkt tot het VLAN waarin dat toestel zich bevindt.
 
+\vspace{5mm}
 Om het allemaal overzichtelijk te houden, is het ook aangeraden om de VLAN’s te koppelen aan specifieke IP-ranges. Zo is het makkelijker om snel te zien in welk VLAN een bepaald toestel zit.
 
 \subsection*{Voorbeeld VLAN-indeling}
